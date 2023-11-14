@@ -1,1 +1,0 @@
-(()=>{"use strict";console.log("test2 42141241222222 24241111 he  ")})();
