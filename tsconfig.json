@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "noImplicitAny": true, // allow any
+    "module": "ESNext", // allow specs
+    "target": "ES5", // specs for compile
+    "jsx": "react", // react tsx/jsx
+    "allowJs": true, // can use js and ts
+    "moduleResolution": "node",
+    "esModuleInterop": true, // common js as packet require
+    "allowSyntheticDefaultImports": true // import * as to default import
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
