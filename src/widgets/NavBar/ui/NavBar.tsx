@@ -2,7 +2,6 @@ import {FC} from 'react';
 import {classNames} from "shared/lib/classNames/classNames";
 import cls from './NavBar.module.scss';
 import {AppLink, AppLinkTheme} from "shared/ui/AppLink/AppLink";
-import {ThemeSwitcher} from "shared/ui/ThemeSwitcher";
 
 interface NavBarProps {
     className?: string;
@@ -14,7 +13,6 @@ export const NavBar:FC<NavBarProps> = ({className}) => {
             <div className={cls.logo}>
                 WebArcticFox
             </div>
-            <ThemeSwitcher />
             <div className={cls.menu}>
                 <AppLink theme={AppLinkTheme.SECONDARY} to={'/'} className={cls.menuItem}>
                     Главная
