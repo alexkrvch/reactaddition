@@ -5,7 +5,8 @@ module.exports = {
     },
     "extends": [
         "standard-with-typescript",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:i18next/recommended"
     ],
     "overrides": [
         {
@@ -26,7 +27,9 @@ module.exports = {
         "project": './tsconfig.json', // The error starts here
     },
     "plugins": [
-        "react"
+        "react",
+        "@typescript-eslint",
+        "i18next"
     ],
     "rules": {
         'react/jsx-indent': [2, 4],
@@ -42,6 +45,7 @@ module.exports = {
         '@typescript-eslint/strict-boolean-expressions': 'off',
         'no-unused-vars': 'warn',
         '@typescript-eslint/explicit-function-return-type': 'warn',
-        '@typescript-eslint/no-floating-promises': 'off'
+        '@typescript-eslint/no-floating-promises': 'off',
+        'i18next/no-literal-string': ['error', {markupOnly: true}]
     }
 }
