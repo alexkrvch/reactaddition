@@ -1,13 +1,13 @@
-import HTMLWebpackPlugin from "html-webpack-plugin";
-import webpack from "webpack";
-import {BuildOptions} from "./types/config";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import ReactRefreshPlugin from "@pmmmwh/react-refresh-webpack-plugin";
+import HTMLWebpackPlugin from 'html-webpack-plugin'
+import webpack from 'webpack'
+import { type BuildOptions } from './types/config'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin'
 
-export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPluginInstance[] {
+export function buildPlugins ({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
     const addPlugins = []
 
-    if(isDev){
+    if (isDev) {
         addPlugins.push(new ReactRefreshPlugin())
         addPlugins.push(new webpack.HotModuleReplacementPlugin())
     }
@@ -22,7 +22,7 @@ export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPlugi
             chunkFilename: 'css/[name].[contenthash:8].css'
         }),
         new webpack.DefinePlugin({
-            __IS_DEV__: JSON.stringify(isDev)
+            _IS_DEV_: JSON.stringify(isDev)
         }),
         ...addPlugins
     ]

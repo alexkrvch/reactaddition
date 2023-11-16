@@ -1,13 +1,13 @@
-import webpack from "webpack";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import {BuildOptions} from "./types/config";
+import type webpack from 'webpack'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import { type BuildOptions } from './types/config'
 
-export function buildLoaders({isDev}: BuildOptions):webpack.RuleSetRule[] {
+export function buildLoaders ({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     // if need jsx - need install babel-loader
     const typescriptLoader = {
         test: /\.tsx?$/,
         use: 'ts-loader',
-        exclude: /node_modules/,
+        exclude: /node_modules/
     }
 
     const svgLoader = {
@@ -33,10 +33,10 @@ export function buildLoaders({isDev}: BuildOptions):webpack.RuleSetRule[] {
                 presets: ['@babel/preset-env'],
                 plugins: [
                     [
-                        "i18next-extract",
+                        'i18next-extract',
                         {
-                            nsSeparator: "~",
-                            locales: ['ru','en'],
+                            nsSeparator: '~',
+                            locales: ['ru', 'en'],
                             keyAsDefaultValue: true
                         }
                     ]
