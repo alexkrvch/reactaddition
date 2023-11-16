@@ -47,6 +47,7 @@ module.exports = {
         'no-unused-vars': 'warn',
         '@typescript-eslint/explicit-function-return-type': 'warn',
         '@typescript-eslint/no-floating-promises': 'off',
-        'i18next/no-literal-string': ['error', {markupOnly: true}]
+        'i18next/no-literal-string': ['error', {markupOnly: true}],
+        'max-len': ['error']
     }
 }
