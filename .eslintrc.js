@@ -1,7 +1,8 @@
 module.exports = {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "jest": true
     },
     "extends": [
         "standard-with-typescript",
@@ -46,6 +47,7 @@ module.exports = {
         'no-unused-vars': 'warn',
         '@typescript-eslint/explicit-function-return-type': 'warn',
         '@typescript-eslint/no-floating-promises': 'off',
-        'i18next/no-literal-string': ['error', {markupOnly: true}]
+        'i18next/no-literal-string': ['error', {markupOnly: true}],
+        'max-len': ["error", { "code": 80 , 'ignoreComments':true}]
     }
 }
