@@ -4,6 +4,7 @@
  */
 
 import type { Config } from 'jest'
+import path from 'path'
 
 const config: Config = {
     clearMocks: true,
@@ -21,11 +22,22 @@ const config: Config = {
         'json',
         'node'
     ],
-    moduleNameMapper: {},
     rootDir: '../../',
     testMatch: [
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'
-    ]
+    ],
+    moduleDirectories: [
+        'node_modules'
+    ],
+    modulePaths: [
+        '<rootDir>src'
+    ],
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
+    moduleNameMapper: {
+        '\\.s?css$': 'identity-obj-proxy',
+        '\\.svg$': path.resolve(__dirname, 'jestEmptyComponent.tsx')
+    }
+
     // All imported modules in your tests should be mocked automatically
     // automock: false,
 
