@@ -6,6 +6,12 @@ export function buildDevServer (options: BuildOptions): DevServerConfiguration {
         port: options.port,
         open: true,
         historyApiFallback: true,
-        hot: true
+        client: {
+            overlay: {
+                errors: false,
+                warnings: false,
+                runtimeErrors: true
+            }
+        }
     }
 }
