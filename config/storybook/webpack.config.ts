@@ -2,10 +2,9 @@ import type webpack from 'webpack'
 import path from 'path'
 import { type BuildPaths } from '../build/types/config'
 import { buildCssLoader } from '../build/loaders/buildCssLoader'
-import { type RuleSetRule } from 'webpack'
 import { buildSVGLoader } from '../build/loaders/buildSVGLoader'
 
-export default ({ config }: { config: webpack.Configuration }) => {
+export default ({ config }: { config: webpack.Configuration }): any => {
     const paths: BuildPaths = {
         build: '',
         html: '',
