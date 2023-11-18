@@ -6,12 +6,13 @@ module.exports = {
             target: 'chrome.app',
             width: 1366,
             height: 768,
-            deviceScaleFactor: 1,
+            deviceScaleFactor: 0.5,
             mobile: false
         },
         'chrome.iphone7': {
             target: 'chrome.app',
-            preset: 'iPhone 7'
+            preset: 'iPhone 7',
+            deviceScaleFactor: 0.5
         }
     }
 }
