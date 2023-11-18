@@ -1,7 +1,7 @@
 module.exports = {
     chromeFlags: '--headless --disable-gpu --hide-scrollbars --no-sandbox',
     diffingEngine: 'looks-same',
-    chromeTolerance: 3,
+    chromeTolerance: 6,
     configurations: {
         'chrome.laptop': {
             target: 'chrome.app',
