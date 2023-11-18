@@ -4,11 +4,7 @@ module.exports = {
         "es2021": true,
         "jest": true
     },
-    "extends": [
-        "standard-with-typescript",
-        "plugin:react/recommended",
-        "plugin:i18next/recommended"
-    ],
+    "extends": ['standard-with-typescript', 'plugin:react/recommended', 'plugin:i18next/recommended', 'plugin:storybook/recommended'],
     "overrides": [
         {
             "env": {
@@ -35,6 +31,7 @@ module.exports = {
     "rules": {
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
+        'react/display-name': 'off',
         '@typescript-eslint/indent': [2, 4],
         'react/jsx-filename-extension': [2, {extensions: ['.js', '.jsx', '.tsx']}],
         'import/no-unresolved': 'off',
@@ -47,7 +44,10 @@ module.exports = {
         'no-unused-vars': 'warn',
         '@typescript-eslint/explicit-function-return-type': 'warn',
         '@typescript-eslint/no-floating-promises': 'off',
-        'i18next/no-literal-string': ['error', {markupOnly: true}],
-        'max-len': ["error", { "code": 100 , 'ignoreComments':true}]
+        'i18next/no-literal-string': [
+            'error',
+            {markupOnly: true}
+        ],
+        'max-len': ["error", {"code": 100, 'ignoreComments': true}]
     }
 }
