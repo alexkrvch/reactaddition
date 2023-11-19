@@ -10,3 +10,5 @@ coverage
 .eslintrc.js
 
 .babel.config.js
+
+/scripts
