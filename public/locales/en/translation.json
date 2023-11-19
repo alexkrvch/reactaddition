@@ -1,7 +1,7 @@
 {
   "Тестовый пример": "Test sample",
   "Перевод": "Translate",
-  "Язык": "RU",
+  "Язык": "English",
   "Загрузка перевода": "Download translate",
   "Свернуть": "Hide",
   "WebArcticFox": "WebArcticFox",
@@ -10,5 +10,6 @@
   "Страница не найдена": "Page not found",
   "Ошибка приложения": "Application error",
   "Обновить страницу": "Reload page",
-  "Throw error": "Throw error (for test)"
+  "Throw error": "Throw error (for test)",
+  "Короткий язык": "EN"
 }
