@@ -26,7 +26,8 @@ module.exports = {
     "plugins": [
         "react",
         "@typescript-eslint",
-        "i18next"
+        "i18next",
+        "react-hooks"
     ],
     "rules": {
         'react/jsx-indent': [2, 4],
@@ -44,6 +45,8 @@ module.exports = {
         'no-unused-vars': 'warn',
         '@typescript-eslint/explicit-function-return-type': 'warn',
         '@typescript-eslint/no-floating-promises': 'off',
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'error',
         'i18next/no-literal-string': [
             'error',
             {markupOnly: true}
