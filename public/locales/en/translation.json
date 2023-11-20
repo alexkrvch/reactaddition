@@ -11,5 +11,6 @@
   "Ошибка приложения": "Application error",
   "Обновить страницу": "Reload page",
   "Throw error": "Throw error (for test)",
-  "Короткий язык": "EN"
+  "Короткий язык": "EN",
+  "Войти": "Login"
 }
