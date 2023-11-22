@@ -1,5 +1,5 @@
 module.exports = {
-    chromeFlags: '--headless --disable-gpu --hide-scrollbars --no-sandbox',
+    chromeFlags: '--headless --disable-gpu --hide-scrollbars',
     diffingEngine: 'looks-same',
     chromeTolerance: 14,
     configurations: {
