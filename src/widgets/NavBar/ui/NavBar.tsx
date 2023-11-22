@@ -2,9 +2,9 @@ import { type FC, useState, useCallback } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './NavBar.module.scss'
 import { useTranslation } from 'react-i18next'
-import { Modal } from 'shared/ui/Modal/Modal'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { Portal } from 'shared/ui/Portal/Portal'
+import { LoginModal } from 'features/AuthByUsername'
 
 interface NavBarProps {
     className?: string
@@ -12,10 +12,14 @@ interface NavBarProps {
 
 export const NavBar: FC<NavBarProps> = ({ className }) => {
     const { t } = useTranslation()
-    const [isOpenAM, setIsOpenAM] = useState(false)
+    const [isOpenModal, setIsOpenAM] = useState(false)
 
-    const onToggleModal = useCallback(() => {
-        setIsOpenAM((prev) => !prev)
+    const onCloseModal = useCallback(() => {
+        setIsOpenAM(false)
+    }, [])
+
+    const onOpenModal = useCallback(() => {
+        setIsOpenAM(true)
     }, [])
 
     return (
@@ -25,14 +29,12 @@ export const NavBar: FC<NavBarProps> = ({ className }) => {
             </div>
             <Button
                 theme={ButtonTheme.CLEAR_INVERTED}
-                onClick={onToggleModal}
+                onClick={onOpenModal}
             >
                 {t('Войти')}
             </Button>
             <Portal>
-                <Modal isOpen={isOpenAM} onClose={onToggleModal}>
-                    <p>MODAL</p>
-                </Modal>
+                <LoginModal isOpen={isOpenModal} onClose={onCloseModal} />
             </Portal>
         </div>
     )

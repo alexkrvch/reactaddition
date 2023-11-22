@@ -12,5 +12,7 @@
   "Обновить страницу": "Reload page",
   "Throw error": "Throw error (for test)",
   "Короткий язык": "EN",
-  "Войти": "Login"
+  "Войти": "Login",
+  "Введите username": "Введите username",
+  "Введите пароль": "Введите пароль"
 }
