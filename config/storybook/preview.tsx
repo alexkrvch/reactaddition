@@ -5,7 +5,6 @@ import { StyleDecorator } from 'shared/config/storybook/StyleDecorator/StyleDeco
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import { RouterDecorator } from 'shared/config/storybook/RouterDecorator/RouterDecorator'
-
 const preview: Preview = {
     parameters: {
         layout: 'fullscreen',
