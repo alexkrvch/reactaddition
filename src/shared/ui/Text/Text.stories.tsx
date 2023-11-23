@@ -5,7 +5,7 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import React from 'react'
 
 const meta = {
-    title: 'shared/TextWT',
+    title: 'shared/Text',
     component: Text,
     parameters: {
         layout: 'fullscreen'
