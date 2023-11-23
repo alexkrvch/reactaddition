@@ -1,17 +1,17 @@
 module.exports = {
     chromeFlags: '--headless --disable-gpu --hide-scrollbars',
     diffingEngine: 'looks-same',
-    chromeTolerance: 14,
+    chromeTolerance: 5,
     configurations: {
         'chrome.laptop': {
-            target: 'chrome.app',
+            target: 'chrome.docker',
             width: 1366,
             height: 768,
             deviceScaleFactor: 1,
             mobile: false
         },
         'chrome.iphone7': {
-            target: 'chrome.app',
+            target: 'chrome.docker',
             preset: 'iPhone 7'
         }
     }
