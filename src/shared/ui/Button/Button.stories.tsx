@@ -258,3 +258,26 @@ export const SquareXLDark: Story = {
         )
     ]
 }
+
+export const DisabledLight: Story = {
+    args: {
+        theme: ButtonTheme.OUTLINE,
+        children: 'Button',
+        disabled: true
+    }
+}
+
+export const DisabledDark: Story = {
+    args: {
+        theme: ButtonTheme.OUTLINE,
+        children: 'Button',
+        disabled: true
+    },
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.DARK}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}

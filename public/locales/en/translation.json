@@ -13,6 +13,8 @@
   "Throw error": "Throw error (for test)",
   "Короткий язык": "EN",
   "Войти": "Login",
-  "Введите username": "Введите username",
-  "Введите пароль": "Введите пароль"
+  "Введите username": "Enter username",
+  "Введите пароль": "Enter password",
+  "Форма авторизации": "Auth form",
+  "Неправильный логин или пароль": "Incorrect username or password"
 }
