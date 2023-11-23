@@ -3,6 +3,7 @@ import path from 'path'
 import { type BuildPaths } from '../build/types/config'
 import { buildCssLoader } from '../build/loaders/buildCssLoader'
 import { buildSVGLoader } from '../build/loaders/buildSVGLoader'
+import { DefinePlugin } from 'webpack'
 
 export default ({ config }: { config: webpack.Configuration }): any => {
     const paths: BuildPaths = {
@@ -24,6 +25,10 @@ export default ({ config }: { config: webpack.Configuration }): any => {
     config.module.rules.push(buildSVGLoader())
     config.resolve.extensions.push('.ts', '.tsx')
     config.module.rules.push(buildCssLoader(true))
+
+    config.plugins.push(new DefinePlugin({
+        _IS_DEV_: true
+    }))
 
     return config
 }

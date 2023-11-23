@@ -3,11 +3,18 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import { AppRouter } from 'app/providers/router'
 import { NavBar } from 'widgets/NavBar'
 import { Sidebar } from 'widgets/Sidebar'
-import { type ReactNode, Suspense } from 'react'
+import { type ReactNode, Suspense, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useDispatch } from 'react-redux'
+import { userActions } from 'ourEntities/User'
 
 const App = (): ReactNode => {
     const { t } = useTranslation()
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(userActions.initAuthData())
+    }, [dispatch])
 
     return (
         <div className={classNames('app', {}, [])}>
