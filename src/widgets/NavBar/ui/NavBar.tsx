@@ -55,9 +55,12 @@ export const NavBar: FC<NavBarProps> = ({ className }) => {
             >
                 {t('Войти')}
             </Button>
+
+            {isOpenModal &&
             <Portal>
                 <LoginModal isOpen={isOpenModal} onClose={onCloseModal} />
             </Portal>
+            }
         </div>
     )
 }
