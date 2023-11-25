@@ -1,14 +1,31 @@
 import { type FC, type ReactNode } from 'react'
 import { type StateSchema, StoreProvider } from 'app/providers/StoreProvider'
-import { type DeepPartial } from '@reduxjs/toolkit'
+import { type DeepPartial, type ReducersMapObject } from '@reduxjs/toolkit'
+import { loginReducer } from 'features/AuthByUsername/model/slice/loginSlice'
 
 interface ThemeDecoratorProps {
     children: ReactNode
     state: DeepPartial<StateSchema>
+    asyncReducers?: DeepPartial<ReducersMapObject<StateSchema>>
 }
 
-export const StoreDecorator: FC<ThemeDecoratorProps> = ({ state, children }) => (
-    <StoreProvider initialState={state}>
-        {children}
-    </StoreProvider>
-)
+const defaultAsyncReducers: DeepPartial<ReducersMapObject<StateSchema>> = {
+    loginForm: loginReducer
+}
+
+export const StoreDecorator: FC<ThemeDecoratorProps> = (props) => {
+    const {
+        state,
+        children,
+        asyncReducers
+    } = props
+
+    return (
+        <StoreProvider
+            initialState={state}
+            asyncReducers={{ ...defaultAsyncReducers, ...asyncReducers }}
+        >
+            {children}
+        </StoreProvider>
+    )
+}
