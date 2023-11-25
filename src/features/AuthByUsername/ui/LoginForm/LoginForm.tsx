@@ -4,7 +4,8 @@ import { useTranslation } from 'react-i18next'
 import cls from './LoginForm.module.scss'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { Input } from 'shared/ui/Input/Input'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { loginActions, loginReducer } from '../../model/slice/loginSlice'
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername'
 import { Text, TextTheme } from 'shared/ui/Text/Text'
@@ -19,6 +20,7 @@ import {
 
 export interface LoginFormProps {
     className?: string
+    onSuccess: () => void
 }
 
 const initialReducers: ReducersList = {
@@ -27,10 +29,11 @@ const initialReducers: ReducersList = {
 
 const LoginForm: FC<LoginFormProps> = memo((props) => {
     const {
-        className
+        className,
+        onSuccess
     } = props
 
-    const dispatch = useDispatch()
+    const dispatch = useAppDispatch()
 
     const username = useSelector(getLoginUsername)
     const password = useSelector(getLoginPassword)
@@ -45,10 +48,12 @@ const LoginForm: FC<LoginFormProps> = memo((props) => {
         dispatch(loginActions.setPassword(value))
     }, [dispatch])
 
-    const onLoginSubmit = useCallback(() => {
-        // @ts-expect-error need work
-        dispatch(loginByUsername({ username, password }))
-    }, [dispatch, username, password])
+    const onLoginSubmit = useCallback(async () => {
+        const result = await dispatch(loginByUsername({ username, password }))
+        if (result.meta.requestStatus === 'fulfilled') {
+            onSuccess()
+        }
+    }, [onSuccess, dispatch, username, password])
 
     const { t } = useTranslation()
 
@@ -82,6 +87,7 @@ const LoginForm: FC<LoginFormProps> = memo((props) => {
                 <Button
                     className={cls.loginBtn}
                     theme={ButtonTheme.OUTLINE}
+                    /* eslint-disable-next-line @typescript-eslint/no-misused-promises */
                     onClick={onLoginSubmit}
                     disabled={isLoading}
                 >

@@ -25,5 +25,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "first": "Alex",
+    "lastname": "Krauchanka",
+    "age": "29",
+    "currency": "RUB",
+    "country": "Belarus",
+    "city": "Polotsk",
+    "username": "admin",
+    "avatar": "https://via.placeholder.com/150x150"
+  }
 }
