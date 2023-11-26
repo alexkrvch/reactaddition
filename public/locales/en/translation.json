@@ -18,5 +18,6 @@
   "Форма авторизации": "Auth form",
   "Неправильный логин или пароль": "Incorrect username or password",
   "Выйти": "Logout",
-  "Development": "Development"
+  "Разработка": "Development",
+  "Профиль": "Profile"
 }
