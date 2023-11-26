@@ -40,7 +40,8 @@ const config: Config = {
         'entities/(.*)': '<rootDir>/src/entities/$1'
     },
     globals: {
-        _IS_DEV_: true
+        _IS_DEV_: true,
+        _API_: ''
     }
 
     // All imported modules in your tests should be mocked automatically
