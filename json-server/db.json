@@ -28,7 +28,7 @@
   "profile": {
     "first": "Alex",
     "lastname": "Krauchanka",
-    "age": "29",
+    "age": 29,
     "currency": "RUB",
     "country": "Belarus",
     "city": "Polotsk",

@@ -24,27 +24,6 @@
     display: flex;
     flex-direction: column;
     padding: 5px 10px;
-    
-    .menuItem {
-        margin-top: 15px;
-        
-        .link {
-            display: flex;
-            align-items: center;
-            white-space: nowrap;
-            
-            svg {
-                margin-right: 10px;
-                fill: var(--inverted-primary-color);
-                width: 20px;
-                height: auto;
-            }
-            
-            span {
-                transition: var(--defaul-transition);
-            }
-        }
-    }
 }
 
 .collapsed {
@@ -56,11 +35,6 @@
         .lang {
             margin: 0;
         }
-    }
-    
-    .menu .menuItem .link span {
-        width: 0;
-        opacity: 0;
     }
 }
 
