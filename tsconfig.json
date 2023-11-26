@@ -6,6 +6,7 @@
     "target": "ES5", // specs for compile
     "jsx": "react-jsx", // react tsx/jsx
     "allowJs": true, // can use js and ts
+    "strict": true,
     "moduleResolution": "node",
     "esModuleInterop": true, // common js as packet require
     "allowSyntheticDefaultImports": true, // import * as to default import
