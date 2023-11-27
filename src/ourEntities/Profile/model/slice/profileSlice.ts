@@ -13,8 +13,8 @@ export const profileSlice = createSlice({
     name: 'profile',
     initialState,
     reducers: {
-        setAuthData: (state, action: PayloadAction<Profile>) => {
-            // state = action.payload
+        setReadonly: (state, action: PayloadAction<boolean>) => {
+            state.readonly = action.payload
         }
     },
     extraReducers: (builder) => {

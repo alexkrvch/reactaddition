@@ -7,10 +7,10 @@ import {
     useEffect,
     useRef
 } from 'react'
-import { classNames } from 'shared/lib/classNames/classNames'
+import { classNames, type Mods } from 'shared/lib/classNames/classNames'
 import cls from './Input.module.scss'
 
-type HTMLInputProps = Omit<InputHTMLAttributes<HTMLElement>, 'value' | 'onChange'>
+type HTMLInputProps = Omit<InputHTMLAttributes<HTMLElement>, 'value' | 'onChange' | 'readonly'>
 
 interface InputProps extends HTMLInputProps {
     className?: string
@@ -18,6 +18,7 @@ interface InputProps extends HTMLInputProps {
     type?: string
     autofocus?: boolean
     onChange?: (value: string) => void
+    readonly?: boolean
 }
 
 export const Input: FC<InputProps> = memo((props) => {
@@ -28,6 +29,7 @@ export const Input: FC<InputProps> = memo((props) => {
         type = 'text',
         placeholder,
         autofocus,
+        readonly,
         ...otherProps
     } = props
 
@@ -59,8 +61,12 @@ export const Input: FC<InputProps> = memo((props) => {
         setCaretPosition(e.target.value.length)
     }
 
+    const mods: Mods = {
+        [cls.readonly]: readonly
+    }
+
     return (
-        <div className={classNames(cls.InputWrapper, {}, [className])}>
+        <div className={classNames(cls.InputWrapper, mods, [className])}>
             {placeholder && (
                 <div className={cls.placeholder}>
                     {`${placeholder}>`}
@@ -76,6 +82,7 @@ export const Input: FC<InputProps> = memo((props) => {
                     onFocus={onFocus}
                     onBlur={onBlur}
                     onSelect={onSelect}
+                    readOnly={readonly}
                     {...otherProps}
                 />
                 {isFocused && (
