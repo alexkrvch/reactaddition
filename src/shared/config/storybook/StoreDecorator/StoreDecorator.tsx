@@ -1,8 +1,9 @@
 import { type FC, type ReactNode } from 'react'
 import { type StateSchema, StoreProvider } from 'app/providers/StoreProvider'
-import { type DeepPartial, type ReducersMapObject } from '@reduxjs/toolkit'
+import { type ReducersMapObject } from '@reduxjs/toolkit'
 import { loginReducer } from 'features/AuthByUsername/model/slice/loginSlice'
 import { profileReducer } from 'ourEntities/Profile'
+import { type ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 
 interface ThemeDecoratorProps {
     children: ReactNode
@@ -10,7 +11,7 @@ interface ThemeDecoratorProps {
     asyncReducers?: DeepPartial<ReducersMapObject<StateSchema>>
 }
 
-const defaultAsyncReducers: DeepPartial<ReducersMapObject<StateSchema>> = {
+const defaultAsyncReducers: ReducersList = {
     loginForm: loginReducer,
     profile: profileReducer
 }

@@ -12,9 +12,9 @@ export default ({ config }: { config: webpack.Configuration }): any => {
         entry: '',
         src: path.resolve(__dirname, '..', '..', 'src')
     }
-    config.resolve.modules.push(paths.src)
+    config.resolve?.modules?.push(paths.src)
 
-    const imageRule = config.module.rules.find((rule) =>
+    const imageRule = config.module?.rules?.find((rule) =>
         // @ts-expect-error problem with config
         rule.test?.test('.svg')
     )
@@ -22,11 +22,11 @@ export default ({ config }: { config: webpack.Configuration }): any => {
     // @ts-expect-error its work still don't change builder for svg
     imageRule.exclude = /\.svg$/
 
-    config.module.rules.push(buildSVGLoader())
-    config.resolve.extensions.push('.ts', '.tsx')
-    config.module.rules.push(buildCssLoader(true))
+    config.module?.rules?.push(buildSVGLoader())
+    config.resolve?.extensions?.push('.ts', '.tsx')
+    config.module?.rules?.push(buildCssLoader(true))
 
-    config.plugins.push(new DefinePlugin({
+    config.plugins?.push(new DefinePlugin({
         _IS_DEV_: true,
         _API_: JSON.stringify('')
     }))
