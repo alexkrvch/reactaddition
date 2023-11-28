@@ -5,7 +5,7 @@ import cls from './ProfilePageHeader.module.scss'
 import { Text } from 'shared/ui/Text/Text'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { useSelector } from 'react-redux'
-import { getProfileReadonly, profileActions } from 'ourEntities/Profile'
+import { getProfileReadonly, profileActions, updateProfileData } from 'ourEntities/Profile'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 
 interface ProfilePageHeaderProps {
@@ -27,7 +27,11 @@ export const ProfilePageHeader: FC<ProfilePageHeaderProps> = (props) => {
     }, [dispatch])
 
     const onCancelEdit = useCallback(() => {
-        dispatch(profileActions.setReadonly(true))
+        dispatch(profileActions.cancelEdit())
+    }, [dispatch])
+
+    const onSave = useCallback(() => {
+        dispatch(updateProfileData())
     }, [dispatch])
 
     return (
@@ -44,15 +48,20 @@ export const ProfilePageHeader: FC<ProfilePageHeaderProps> = (props) => {
                     </Button>
                 )
                 : (
-                    <>
+                    <div className={cls.editBtn}>
                         <Button
-                            theme={ButtonTheme.OUTLINE}
-                            className={cls.editBtn}
+                            theme={ButtonTheme.OUTLINE_RED}
                             onClick={onCancelEdit}
                         >
                             {t('Отменить')}
                         </Button>
-                    </>
+                        <Button
+                            theme={ButtonTheme.OUTLINE}
+                            onClick={onSave}
+                        >
+                            {t('Сохранить')}
+                        </Button>
+                    </div>
                 )
             }
         </div>
