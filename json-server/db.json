@@ -29,10 +29,10 @@
     "first": "Alex",
     "lastname": "Krauchanka",
     "age": 29,
-    "currency": "RUB",
+    "currency": "EUR",
     "country": "Belarus",
     "city": "Polotsk",
-    "username": "admin",
+    "username": "heikun",
     "avatar": "https://via.placeholder.com/150x150"
   }
 }
