@@ -4,6 +4,24 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import React from 'react'
 import ProfilePage from './ProfilePage'
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator'
+import { Country } from 'ourEntities/Country'
+import { Currency } from 'ourEntities/Currency'
+import avatar from 'shared/assets/png/150x150.png'
+
+const dataForProfile = {
+    profile: {
+        form: {
+            username: 'heikun',
+            lastname: 'Kravchenko',
+            age: 29,
+            country: Country.Belarus,
+            first: 'Alex',
+            currency: Currency.RUB,
+            avatar,
+            city: 'Polotsk'
+        }
+    }
+}
 
 const meta = {
     title: 'pages/ProfilePage',
@@ -21,7 +39,7 @@ export const ProfilePageLight: Story = {
     args: {},
     decorators: [
         (Story) => (
-            <StoreDecorator state={{ profile: undefined }}>
+            <StoreDecorator state={dataForProfile}>
                 <Story />
             </StoreDecorator>
         )
@@ -32,7 +50,7 @@ export const ProfilePageDark: Story = {
     args: {},
     decorators: [
         (Story) => (
-            <StoreDecorator state={{ profile: undefined }}>
+            <StoreDecorator state={dataForProfile}>
                 <ThemeDecorator theme={Theme.DARK}>
                     <Story />
                 </ThemeDecorator>
