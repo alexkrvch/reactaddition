@@ -70,12 +70,21 @@ export const ProfileCard: FC<ProfileCardProps> = (props) => {
         [cls.editing]: !readonly
     }
 
+    let fileName: string | undefined
+
+    if (data?.avatar) {
+        const avatarStr = data.avatar.split('/')
+        fileName = avatarStr.pop()?.split('.')?.shift() || ''
+    } else {
+        fileName = ''
+    }
+
     return (
         <div className={classNames(cls.ProfileCard, mods, [className])}>
             <div className={cls.info}>
                 <div className={cls.avatarWrapper}>
-                    {data?.avatar
-                        ? <Avatar src={data.avatar} />
+                    {fileName
+                        ? <Avatar src={data?.avatar} />
                         : <Avatar src={'https://via.placeholder.com/150x150'} />
                     }
                 </div>
@@ -110,7 +119,7 @@ export const ProfileCard: FC<ProfileCardProps> = (props) => {
                     readOnly={readonly}
                 />
                 <Input
-                    value={data?.avatar}
+                    value={fileName}
                     placeholder={t('Аватар пользователя')}
                     className={cls.input}
                     onChange={onChangeAvatar}
