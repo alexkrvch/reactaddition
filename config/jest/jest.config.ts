@@ -41,7 +41,8 @@ const config: Config = {
     },
     globals: {
         _IS_DEV_: true,
-        _API_: ''
+        _API_: '',
+        _PROJECT_: 'jest'
     }
 
     // All imported modules in your tests should be mocked automatically

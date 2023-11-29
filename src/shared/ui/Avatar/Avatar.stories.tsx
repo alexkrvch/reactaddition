@@ -3,7 +3,7 @@ import { Theme } from 'app/providers/ThemeProvider'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import React from 'react'
 import { Avatar } from './Avatar'
-import DefaultAvatar from './150x150.png'
+import DefaultAvatar from '../../assets/png/150x150.png'
 
 const meta = {
     title: 'shared/Avatar',
