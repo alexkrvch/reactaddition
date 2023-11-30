@@ -30,3 +30,14 @@ export const LoaderDark: Story = {
         )
     ]
 }
+
+export const LoaderOrange: Story = {
+    args: {},
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.ORANGE}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}

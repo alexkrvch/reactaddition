@@ -30,3 +30,14 @@ export const NotFoundPageDark: Story = {
         )
     ]
 }
+
+export const NotFoundPageOrange: Story = {
+    args: {},
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.ORANGE}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}

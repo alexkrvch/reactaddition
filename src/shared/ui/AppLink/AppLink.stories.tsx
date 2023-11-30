@@ -40,6 +40,20 @@ export const PrimaryDark: Story = {
     ]
 }
 
+export const PrimaryOrange: Story = {
+    args: {
+        children: 'Link text',
+        theme: AppLinkTheme.PRIMARY
+    },
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.ORANGE}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}
+
 export const SecondaryLight: Story = {
     args: {
         children: 'Link text',
@@ -55,6 +69,20 @@ export const SecondaryDark: Story = {
     decorators: [
         (Story) => (
             <ThemeDecorator theme={Theme.DARK}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}
+
+export const SecondaryOrange: Story = {
+    args: {
+        children: 'Link text',
+        theme: AppLinkTheme.SECONDARY
+    },
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.ORANGE}>
                 <Story />
             </ThemeDecorator>
         )

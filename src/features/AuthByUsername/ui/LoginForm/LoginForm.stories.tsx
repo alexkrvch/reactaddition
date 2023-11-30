@@ -41,6 +41,19 @@ export const PrimaryDark: Story = {
     ]
 }
 
+export const PrimaryOrange: Story = {
+    args: {},
+    decorators: [
+        (Story) => (
+            <StoreDecorator state={{ loginForm: { username: '123', password: '123' } }}>
+                <ThemeDecorator theme={Theme.ORANGE}>
+                    <Story />
+                </ThemeDecorator>
+            </StoreDecorator>
+        )
+    ]
+}
+
 export const PrimaryWithErrorLight: Story = {
     args: {},
     decorators: [
@@ -79,6 +92,25 @@ export const PrimaryWithErrorDark: Story = {
     ]
 }
 
+export const PrimaryWithErrorOrange: Story = {
+    args: {},
+    decorators: [
+        (Story) => (
+            <StoreDecorator state={{
+                loginForm: {
+                    username: '123',
+                    password: '123',
+                    error: 'Auth error'
+                }
+            }}>
+                <ThemeDecorator theme={Theme.ORANGE}>
+                    <Story />
+                </ThemeDecorator>
+            </StoreDecorator>
+        )
+    ]
+}
+
 export const PrimaryWithLoadingLight: Story = {
     args: {},
     decorators: [
@@ -110,6 +142,25 @@ export const PrimaryWithLoadingDark: Story = {
                 }
             }}>
                 <ThemeDecorator theme={Theme.DARK}>
+                    <Story />
+                </ThemeDecorator>
+            </StoreDecorator>
+        )
+    ]
+}
+
+export const PrimaryWithLoadingOrange: Story = {
+    args: {},
+    decorators: [
+        (Story) => (
+            <StoreDecorator state={{
+                loginForm: {
+                    username: '123',
+                    password: '123',
+                    isLoading: true
+                }
+            }}>
+                <ThemeDecorator theme={Theme.ORANGE}>
                     <Story />
                 </ThemeDecorator>
             </StoreDecorator>

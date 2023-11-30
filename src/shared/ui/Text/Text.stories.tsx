@@ -37,6 +37,20 @@ export const PrimaryDark: Story = {
     ]
 }
 
+export const PrimaryOrange: Story = {
+    args: {
+        title: 'Title lorem',
+        text: 'Desc text for something'
+    },
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.ORANGE}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}
+
 export const PrimaryOnlyTitleLight: Story = {
     args: {
         title: 'Title lorem'
@@ -50,6 +64,19 @@ export const PrimaryOnlyTitleDark: Story = {
     decorators: [
         (Story) => (
             <ThemeDecorator theme={Theme.DARK}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}
+
+export const PrimaryOnlyTitleOrange: Story = {
+    args: {
+        title: 'Title lorem'
+    },
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.ORANGE}>
                 <Story />
             </ThemeDecorator>
         )
@@ -75,6 +102,19 @@ export const PrimaryOnlyTextDark: Story = {
     ]
 }
 
+export const PrimaryOnlyTextOrange: Story = {
+    args: {
+        text: 'Desc text for something'
+    },
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.ORANGE}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}
+
 export const ErrorLight: Story = {
     args: {
         title: 'Title error',
@@ -92,6 +132,21 @@ export const ErrorDark: Story = {
     decorators: [
         (Story) => (
             <ThemeDecorator theme={Theme.DARK}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}
+
+export const ErrorOrange: Story = {
+    args: {
+        title: 'Title error',
+        text: 'Desc error info',
+        theme: TextTheme.ERROR
+    },
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.ORANGE}>
                 <Story />
             </ThemeDecorator>
         )

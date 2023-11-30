@@ -51,6 +51,24 @@ export const Dark: Story = {
     ]
 }
 
+export const Orange: Story = {
+    args: {},
+    decorators: [
+        (Story) => (
+            <StoreDecorator state={
+                {
+                    user: {
+                        authData: {}
+                    }
+                }}>
+                <ThemeDecorator theme={Theme.ORANGE}>
+                    <Story />
+                </ThemeDecorator>
+            </StoreDecorator>
+        )
+    ]
+}
+
 export const NoAuth: Story = {
     args: {},
     decorators: [

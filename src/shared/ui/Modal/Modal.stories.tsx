@@ -36,3 +36,17 @@ export const ModalDark: Story = {
         )
     ]
 }
+
+export const ModalOrange: Story = {
+    args: {
+        isOpen: true,
+        children: 'Lorem text'
+    },
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.ORANGE}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}

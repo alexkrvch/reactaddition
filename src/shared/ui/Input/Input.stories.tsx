@@ -36,3 +36,17 @@ export const PrimaryDark: Story = {
         )
     ]
 }
+
+export const PrimaryOrange: Story = {
+    args: {
+        placeholder: 'Ввведите текст',
+        value: 'test text'
+    },
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.ORANGE}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}
