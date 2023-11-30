@@ -35,6 +35,19 @@ export const PrimaryDark: Story = {
     ]
 }
 
+export const PrimaryOrange: Story = {
+    args: {
+        children: 'Test'
+    },
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.ORANGE}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}
+
 export const ClearLight: Story = {
     args: {
         theme: ButtonTheme.CLEAR,
@@ -50,6 +63,20 @@ export const ClearDark: Story = {
     decorators: [
         (Story) => (
             <ThemeDecorator theme={Theme.DARK}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}
+
+export const ClearOrange: Story = {
+    args: {
+        theme: ButtonTheme.CLEAR,
+        children: 'Test'
+    },
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.ORANGE}>
                 <Story />
             </ThemeDecorator>
         )
@@ -77,6 +104,20 @@ export const ClearInvertedDark: Story = {
     ]
 }
 
+export const ClearInvertedOrange: Story = {
+    args: {
+        theme: ButtonTheme.CLEAR_INVERTED,
+        children: 'Test'
+    },
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.ORANGE}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}
+
 export const OutlineLight: Story = {
     args: {
         theme: ButtonTheme.OUTLINE,
@@ -92,6 +133,20 @@ export const OutlineDark: Story = {
     decorators: [
         (Story) => (
             <ThemeDecorator theme={Theme.DARK}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}
+
+export const OutlineOrange: Story = {
+    args: {
+        theme: ButtonTheme.OUTLINE,
+        children: 'Test'
+    },
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.ORANGE}>
                 <Story />
             </ThemeDecorator>
         )
@@ -121,6 +176,21 @@ export const OutlineDarkSizeL: Story = {
     ]
 }
 
+export const OutlineOrangeSizeL: Story = {
+    args: {
+        theme: ButtonTheme.OUTLINE,
+        children: 'Test',
+        size: ButtonSize.L
+    },
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.ORANGE}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}
+
 export const OutlineLightSizeXL: Story = {
     args: {
         theme: ButtonTheme.OUTLINE,
@@ -138,6 +208,21 @@ export const OutlineDarkSizeXL: Story = {
     decorators: [
         (Story) => (
             <ThemeDecorator theme={Theme.DARK}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}
+
+export const OutlineOrangeSizeXL: Story = {
+    args: {
+        theme: ButtonTheme.OUTLINE,
+        children: 'Test',
+        size: ButtonSize.XL
+    },
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.ORANGE}>
                 <Story />
             </ThemeDecorator>
         )
@@ -165,6 +250,20 @@ export const BackgroundDark: Story = {
     ]
 }
 
+export const BackgroundOrange: Story = {
+    args: {
+        theme: ButtonTheme.BACKGROUND,
+        children: 'Test'
+    },
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.ORANGE}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}
+
 export const BackgroundInvertedLight: Story = {
     args: {
         theme: ButtonTheme.BACKGROUND_INVERTED,
@@ -180,6 +279,20 @@ export const BackgroundInvertedDark: Story = {
     decorators: [
         (Story) => (
             <ThemeDecorator theme={Theme.DARK}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}
+
+export const BackgroundInvertedOrange: Story = {
+    args: {
+        theme: ButtonTheme.BACKGROUND_INVERTED,
+        children: 'Test'
+    },
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.ORANGE}>
                 <Story />
             </ThemeDecorator>
         )
@@ -203,6 +316,21 @@ export const SquareDark: Story = {
     decorators: [
         (Story) => (
             <ThemeDecorator theme={Theme.DARK}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}
+
+export const SquareOrange: Story = {
+    args: {
+        theme: ButtonTheme.BACKGROUND_INVERTED,
+        children: '<',
+        square: true
+    },
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.ORANGE}>
                 <Story />
             </ThemeDecorator>
         )
@@ -234,6 +362,22 @@ export const SquareLDark: Story = {
     ]
 }
 
+export const SquareLOrange: Story = {
+    args: {
+        theme: ButtonTheme.BACKGROUND_INVERTED,
+        children: '<',
+        size: ButtonSize.L,
+        square: true
+    },
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.ORANGE}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}
+
 export const SquareXLLight: Story = {
     args: {
         theme: ButtonTheme.BACKGROUND_INVERTED,
@@ -259,6 +403,22 @@ export const SquareXLDark: Story = {
     ]
 }
 
+export const SquareXLOrange: Story = {
+    args: {
+        theme: ButtonTheme.BACKGROUND_INVERTED,
+        children: '<',
+        size: ButtonSize.XL,
+        square: true
+    },
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.ORANGE}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}
+
 export const DisabledLight: Story = {
     args: {
         theme: ButtonTheme.OUTLINE,
@@ -276,6 +436,21 @@ export const DisabledDark: Story = {
     decorators: [
         (Story) => (
             <ThemeDecorator theme={Theme.DARK}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}
+
+export const DisabledOrange: Story = {
+    args: {
+        theme: ButtonTheme.OUTLINE,
+        children: 'Button',
+        disabled: true
+    },
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.ORANGE}>
                 <Story />
             </ThemeDecorator>
         )

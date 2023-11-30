@@ -37,6 +37,17 @@ export const PrimaryDark: Story = {
     ]
 }
 
+export const PrimaryOrange: Story = {
+    args: {},
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.ORANGE}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}
+
 export const PrimaryLightWithSize: Story = {
     args: {
         size: 150
@@ -50,6 +61,19 @@ export const PrimaryDarkWithSize: Story = {
     decorators: [
         (Story) => (
             <ThemeDecorator theme={Theme.DARK}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}
+
+export const PrimaryOrangeWithSize: Story = {
+    args: {
+        size: 150
+    },
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.ORANGE}>
                 <Story />
             </ThemeDecorator>
         )

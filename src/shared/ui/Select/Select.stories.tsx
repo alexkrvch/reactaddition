@@ -10,14 +10,6 @@ const meta = {
     parameters: {
         layout: 'fullscreen'
     },
-    args: {},
-    tags: ['autodocs']
-} satisfies Meta<typeof Select>
-
-export default meta
-type Story = StoryObj<typeof meta>
-
-export const PrimaryLight: Story = {
     args: {
         label: 'Указажите значение',
         options: [
@@ -25,7 +17,15 @@ export const PrimaryLight: Story = {
             { value: '1234', content: 'Второй' },
             { value: '12345', content: 'Третий' }
         ]
-    }
+    },
+    tags: ['autodocs']
+} satisfies Meta<typeof Select>
+
+export default meta
+type Story = StoryObj<typeof meta>
+
+export const PrimaryLight: Story = {
+    args: {}
 }
 
 export const PrimaryDark: Story = {
@@ -33,6 +33,17 @@ export const PrimaryDark: Story = {
     decorators: [
         (Story) => (
             <ThemeDecorator theme={Theme.DARK}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}
+
+export const PrimaryOrange: Story = {
+    args: {},
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.ORANGE}>
                 <Story />
             </ThemeDecorator>
         )

@@ -51,6 +51,16 @@ export const ProfileCardDark: Story = {
     ]
 }
 
+export const ProfileCardOrange: Story = {
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.ORANGE}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}
+
 export const EditMode: Story = {
     args: {
         readonly: false

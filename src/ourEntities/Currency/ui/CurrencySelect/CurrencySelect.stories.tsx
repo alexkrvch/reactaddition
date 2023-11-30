@@ -31,3 +31,14 @@ export const PrimaryDark: Story = {
         )
     ]
 }
+
+export const PrimaryOrange: Story = {
+    args: {},
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.ORANGE}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}

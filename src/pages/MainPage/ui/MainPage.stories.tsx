@@ -30,3 +30,14 @@ export const MainPageDark: Story = {
         )
     ]
 }
+
+export const MainPageOrange: Story = {
+    args: {},
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.ORANGE}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}

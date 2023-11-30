@@ -58,3 +58,16 @@ export const ProfilePageDark: Story = {
         )
     ]
 }
+
+export const ProfilePageOrange: Story = {
+    args: {},
+    decorators: [
+        (Story) => (
+            <StoreDecorator state={dataForProfile}>
+                <ThemeDecorator theme={Theme.ORANGE}>
+                    <Story />
+                </ThemeDecorator>
+            </StoreDecorator>
+        )
+    ]
+}

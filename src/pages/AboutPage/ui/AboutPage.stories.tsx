@@ -30,3 +30,14 @@ export const AboutPageDark: Story = {
         )
     ]
 }
+
+export const AboutPageOrange: Story = {
+    args: {},
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.ORANGE}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}
