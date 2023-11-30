@@ -2,8 +2,13 @@ import type webpack from 'webpack'
 import { type BuildOptions } from './types/config'
 import { buildCssLoader } from './loaders/buildCssLoader'
 import { buildSVGLoader } from './loaders/buildSVGLoader'
+import { buildBabelLoader } from './loaders/buildBabelLoader'
 
-export function buildLoaders ({ isDev }: BuildOptions): webpack.RuleSetRule[] {
+export function buildLoaders (options: BuildOptions): webpack.RuleSetRule[] {
+    const {
+        isDev
+    } = options
+
     // if need jsx - need install babel-loader
     const typescriptLoader = {
         test: /\.tsx?$/,
@@ -22,16 +27,7 @@ export function buildLoaders ({ isDev }: BuildOptions): webpack.RuleSetRule[] {
         ]
     }
 
-    const babelLoader = {
-        test: /\.(js|jsx|tsx|ts)$/,
-        exclude: /node_modules/,
-        use: {
-            loader: 'babel-loader',
-            options: {
-                presets: ['@babel/preset-env']
-            }
-        }
-    }
+    const babelLoader = buildBabelLoader(options)
 
     const cssLoader = buildCssLoader(isDev)
 
