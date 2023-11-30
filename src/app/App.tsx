@@ -5,12 +5,13 @@ import { NavBar } from 'widgets/NavBar'
 import { Sidebar } from 'widgets/Sidebar'
 import { type ReactNode, Suspense, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useDispatch } from 'react-redux'
-import { userActions } from 'ourEntities/User'
+import { useDispatch, useSelector } from 'react-redux'
+import { getUserInit, userActions } from 'ourEntities/User'
 
 const App = (): ReactNode => {
     const { t } = useTranslation()
     const dispatch = useDispatch()
+    const init = useSelector(getUserInit)
 
     useEffect(() => {
         dispatch(userActions.initAuthData())
@@ -22,7 +23,7 @@ const App = (): ReactNode => {
                 <NavBar/>
                 <div className="content-page">
                     <Sidebar/>
-                    <AppRouter/>
+                    {init && <AppRouter/>}
                 </div>
             </Suspense>
         </div>
