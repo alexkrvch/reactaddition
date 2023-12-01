@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Text, TextTheme } from './Text'
+import { Text, TextSize, TextTheme } from './Text'
 import { Theme } from 'app/providers/ThemeProvider'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import React from 'react'
@@ -41,6 +41,44 @@ export const PrimaryOrange: Story = {
     args: {
         title: 'Title lorem',
         text: 'Desc text for something'
+    },
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.ORANGE}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}
+
+export const PrimaryLightL: Story = {
+    args: {
+        title: 'Title lorem',
+        text: 'Desc text for something',
+        size: TextSize.L
+    }
+}
+
+export const PrimaryDarkL: Story = {
+    args: {
+        title: 'Title lorem',
+        text: 'Desc text for something',
+        size: TextSize.L
+    },
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.DARK}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}
+
+export const PrimaryOrangeL: Story = {
+    args: {
+        title: 'Title lorem',
+        text: 'Desc text for something',
+        size: TextSize.L
     },
     decorators: [
         (Story) => (
