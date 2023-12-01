@@ -2,6 +2,7 @@ import { type CounterSchema } from 'ourEntities/Counter'
 import { type UserSchema } from 'ourEntities/User'
 import { type ProfileSchema } from 'ourEntities/Profile'
 import { type LoginSchema } from 'features/AuthByUsername'
+import { type ArticleDetailsSchema } from 'ourEntities/Article'
 import {
     type AnyAction,
     type CombinedState,
@@ -19,6 +20,7 @@ export interface StateSchema {
     // Async reducers
     loginForm?: LoginSchema
     profile?: ProfileSchema
+    articleDetails?: ArticleDetailsSchema
 }
 
 export type StateSchemaKey = keyof StateSchema

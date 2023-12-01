@@ -2,6 +2,7 @@ import { memo, type FC } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
 import cls from './ArticleDetailsPage.module.scss'
+import { ArticleDetails } from 'ourEntities/Article'
 
 interface ArticleDetailsPageProps {
     className?: string
@@ -16,7 +17,7 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
 
     return (
         <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-            Article detail page
+            <ArticleDetails />
         </div>
     )
 }
