@@ -1,6 +1,5 @@
 import { type FC, memo } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
-import { useTranslation } from 'react-i18next'
 import cls from './ArticleTextBlockComponent.module.scss'
 import { type ArticleTextBlock } from '../../model/types/article'
 import { Text } from 'shared/ui/Text/Text'
@@ -15,8 +14,6 @@ export const ArticleTextBlockComponent: FC<ArticleTextBlockComponentProps> = mem
         className,
         block
     } = props
-
-    const { t } = useTranslation()
 
     return (
         <div className={classNames(cls.ArticleTextBlockComponent, {}, [className])}>

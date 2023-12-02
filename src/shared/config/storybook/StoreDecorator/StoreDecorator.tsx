@@ -4,6 +4,7 @@ import { type ReducersMapObject } from '@reduxjs/toolkit'
 import { loginReducer } from 'features/AuthByUsername/model/slice/loginSlice'
 import { profileReducer } from 'ourEntities/Profile'
 import { type ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
+import { articleDetailsReducer } from 'ourEntities/Article/model/slice/articleDetailsSlice'
 
 interface ThemeDecoratorProps {
     children: ReactNode
@@ -13,7 +14,8 @@ interface ThemeDecoratorProps {
 
 const defaultAsyncReducers: ReducersList = {
     loginForm: loginReducer,
-    profile: profileReducer
+    profile: profileReducer,
+    articleDetails: articleDetailsReducer
 }
 
 export const StoreDecorator: FC<ThemeDecoratorProps> = (props) => {
