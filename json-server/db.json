@@ -81,7 +81,7 @@
         {
           "id": "7",
           "type": "CODE",
-          "code": "variable = \"Значение\"; //тут мы сохраняем \"Значение\" в переменной variable"
+          "code": "export const ArticleCodeBlockComponent: FC<ArticleCodeBlockComponentProps> = memo((props) => {\n    const {\n        className,\n        block\n    } = props\n\n    const { t } = useTranslation()\n\n    return (\n        <div className={classNames(cls.ArticleCodeBlockComponent, {}, [className])}>\n            <Code>\n                {block.code}\n            </Code>\n        </div>\n    )\n})"
         },
         {
           "id": "8",
@@ -96,6 +96,20 @@
           "id": "9",
           "type": "CODE",
           "code": "var variable; //все так же\nvariable = \"Значение\"; //тут мы сохраняем \"Значение\" в переменной variable"
+        },
+        {
+          "id": "10",
+          "type": "TEXT",
+          "title": "Начало пути",
+          "paragraphs": [
+            "Этот блог и будущие публикации будут содержать в основном контент о программировании: статьи, ресурсы, туториалы, создание приложений и т.д. В первых публикациях я хочу рассказать о базовых вещах, которые мне понадобятся для создания будущих проектов. Я давно выбрал фронтенд, поэтому сейчас изучаю JavaScript, HTML, CSS."
+          ]
+        },
+        {
+          "id": "11",
+          "type": "IMAGE",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Code-1076536.jpg",
+          "title": "It's all what you need now about JS and how use it"
         }
       ]
     }
