@@ -24,9 +24,15 @@ import EyeIcon from 'shared/assets/icons/eye-20-20.svg'
 import CalendarIcon from 'shared/assets/icons/calendar-20-20.svg'
 import { Icon } from 'shared/ui/Icon/Icon'
 import { ArticleBlockType, type ArticleBlock } from '../../model/types/article'
-import { ArticleCodeBlockComponent } from 'ourEntities/Article/ui/ArticleCodeBlockComponent/ArticleCodeBlockComponent'
-import { ArticleImageBlockComponent } from 'ourEntities/Article/ui/ArticleImageBlockComponent/ArticleImageBlockComponent'
-import { ArticleTextBlockComponent } from 'ourEntities/Article/ui/ArticleTextBlockComponent/ArticleTextBlockComponent'
+import {
+    ArticleCodeBlockComponent
+} from 'ourEntities/Article/ui/ArticleCodeBlockComponent/ArticleCodeBlockComponent'
+import {
+    ArticleImageBlockComponent
+} from 'ourEntities/Article/ui/ArticleImageBlockComponent/ArticleImageBlockComponent'
+import {
+    ArticleTextBlockComponent
+} from 'ourEntities/Article/ui/ArticleTextBlockComponent/ArticleTextBlockComponent'
 
 interface ArticleDetailsProps {
     className?: string
@@ -53,18 +59,32 @@ export const ArticleDetails: FC<ArticleDetailsProps> = memo((props) => {
     const renderBlock = useCallback((block: ArticleBlock) => {
         switch (block.type) {
             case ArticleBlockType.CODE:
-                return <ArticleCodeBlockComponent className={cls.block} block={block} />
+                return <ArticleCodeBlockComponent
+                    key={block.id}
+                    className={cls.block}
+                    block={block}
+                />
             case ArticleBlockType.IMAGE:
-                return <ArticleImageBlockComponent className={cls.block} block={block}/>
+                return <ArticleImageBlockComponent
+                    key={block.id}
+                    className={cls.block}
+                    block={block}
+                />
             case ArticleBlockType.TEXT:
-                return <ArticleTextBlockComponent className={cls.block} block={block} />
+                return <ArticleTextBlockComponent
+                    key={block.id}
+                    className={cls.block}
+                    block={block}
+                />
             default:
                 return null
         }
     }, [])
 
     useEffect(() => {
-        dispatch(fetchArticleById(id))
+        if (_PROJECT_ !== 'storybook') {
+            dispatch(fetchArticleById(id))
+        }
     }, [dispatch, id])
 
     let content

@@ -1,5 +1,5 @@
 import ArticlesPage from './ArticlesPage'
-import { render, screen } from '@testing-library/react'
+import { render } from '@testing-library/react'
 
 describe('ArticlesPage component', () => {
     test('Create and test render', () => {
