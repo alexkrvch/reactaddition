@@ -1,4 +1,4 @@
-import { type FC, memo, useEffect, useCallback } from 'react'
+import { type FC, memo, useCallback } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
 import cls from './ArticleDetails.module.scss'
@@ -33,6 +33,7 @@ import {
 import {
     ArticleTextBlockComponent
 } from 'ourEntities/Article/ui/ArticleTextBlockComponent/ArticleTextBlockComponent'
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 
 interface ArticleDetailsProps {
     className?: string
@@ -81,11 +82,9 @@ export const ArticleDetails: FC<ArticleDetailsProps> = memo((props) => {
         }
     }, [])
 
-    useEffect(() => {
-        if (_PROJECT_ !== 'storybook') {
-            dispatch(fetchArticleById(id))
-        }
-    }, [dispatch, id])
+    useInitialEffect(() => {
+        dispatch(fetchArticleById(id))
+    })
 
     let content
 
