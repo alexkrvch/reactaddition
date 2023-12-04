@@ -6,7 +6,6 @@ import { Input } from 'shared/ui/Input/Input'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { useSelector } from 'react-redux'
 import {
-    getAddCommentFormError, getAddCommentFormIsLoading,
     getAddCommentFormText
 } from '../../model/selectors/addCommentFormSelectors'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
@@ -35,8 +34,8 @@ const AddCommentForm: FC<AddCommentFormProps> = memo((props) => {
     } = props
     const { t } = useTranslation('article')
     const text = useSelector(getAddCommentFormText)
-    const error = useSelector(getAddCommentFormError)
-    const isLoading = useSelector(getAddCommentFormIsLoading)
+    // const error = useSelector(getAddCommentFormError)
+    // const isLoading = useSelector(getAddCommentFormIsLoading)
     const dispatch = useAppDispatch()
 
     const onCommentTextChange = useCallback((value: string) => {
