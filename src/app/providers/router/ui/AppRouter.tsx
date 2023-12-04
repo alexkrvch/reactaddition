@@ -7,7 +7,11 @@ import { RequireAuth } from 'app/providers/router/ui/requireAuth'
 export const AppRouter: FC = memo(() => {
     const renderWithWrapper = useCallback((route: AppRouteProps) => {
         const element = (
-            <Suspense fallback={<PageLoader />}>
+            <Suspense fallback={
+                <div className='page-wrapper'>
+                    <PageLoader />
+                </div>}
+            >
                 <div className='page-wrapper'>
                     {route.element}
                 </div>

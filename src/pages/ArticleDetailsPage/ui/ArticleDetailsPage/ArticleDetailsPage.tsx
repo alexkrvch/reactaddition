@@ -1,4 +1,4 @@
-import { memo, type FC } from 'react'
+import { memo, type FC, useCallback } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
 import { ArticleDetails } from 'ourEntities/Article'
@@ -17,13 +17,16 @@ import {
 import { useSelector } from 'react-redux'
 import {
     getArticleCommentsIsLoading
-} from 'pages/ArticleDetailsPage/model/selectors/comments'
+} from '../../model/selectors/comments'
 import {
     fetchCommentsByArticleId
-} from 'pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
+} from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { AddCommentForm } from 'features/addCommentForm'
+import {
+    sendCommentForArticle
+} from '../../model/services/addCommentForArticle/addCommentForArticle'
 
 interface ArticleDetailsPageProps {
     className?: string
@@ -41,6 +44,10 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
     const { t } = useTranslation('article')
     const { id } = useParams<{ id: string }>()
     const dispatch = useAppDispatch()
+
+    const onSendComment = useCallback((text: string) => {
+        dispatch(sendCommentForArticle(text))
+    }, [dispatch])
 
     useInitialEffect(() => {
         dispatch(fetchCommentsByArticleId(id))
@@ -63,7 +70,9 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
             <div className={classNames('', {}, [className])}>
                 <ArticleDetails id={id} />
                 <Text className={cls.commentTitle} title={t('Комментарии')} />
-                <AddCommentForm />
+                <AddCommentForm
+                    onSendComment={onSendComment}
+                />
                 <CommentList
                     isLoading={isLoading}
                     comments={comments}

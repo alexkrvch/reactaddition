@@ -1,28 +1,29 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
 import { getUserAuthData } from 'ourEntities/User'
-import { USER_LOCALSTORAGE_KEY } from 'shared/const/localStorage'
 import { type ThunkConfig } from 'app/providers/StoreProvider'
 import { type Comment } from 'ourEntities/Comment'
-import { getAddCommentFormText } from '../../selectors/addCommentFormSelectors'
 import { getArticleDetailsData } from 'ourEntities/Article'
+import {
+    fetchCommentsByArticleId
+} from '../fetchCommentsByArticleId/fetchCommentsByArticleId'
 
-export const sendComment =
+export const sendCommentForArticle =
     createAsyncThunk<
     Comment,
     // eslint-disable-next-line @typescript-eslint/no-invalid-void-type
-    void,
+    string,
     ThunkConfig<string>
     >(
-        'addCommentForm/sendComment',
-        async (authData, thunkAPI) => {
+        'articleDetails/sendCommentForArticle',
+        async (text, thunkAPI) => {
             const {
                 extra,
                 rejectWithValue,
+                dispatch,
                 getState
             } = thunkAPI
 
             const userData = getUserAuthData(getState())
-            const text = getAddCommentFormText(getState())
             const article = getArticleDetailsData(getState())
 
             if (!userData || !text || !article) {
@@ -40,7 +41,7 @@ export const sendComment =
                     throw new Error('Empty response')
                 }
 
-                localStorage.setItem(USER_LOCALSTORAGE_KEY, JSON.stringify(response.data))
+                dispatch(fetchCommentsByArticleId(article.id))
 
                 return response.data
             } catch (e) {
