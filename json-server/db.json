@@ -35,7 +35,9 @@
       "img": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
       "views": 1058,
       "createdAt": "26.08.2023",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -134,16 +136,36 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "2"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "Heihei",
+      "id": "UZB3_a0"
     }
   ],
-  "profile": {
-    "first": "Alex",
-    "lastname": "Krauchanka )",
-    "age": 29,
-    "currency": "EUR",
-    "country": "Belarus",
-    "city": "Polotsk",
-    "username": "heikun",
-    "avatar": "https://via.placeholder.com/150x150"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Alex",
+      "lastname": "Krauchanka )",
+      "age": 29,
+      "currency": "EUR",
+      "country": "Belarus",
+      "city": "Polotsk",
+      "username": "heikun",
+      "avatar": "https://via.placeholder.com/150x150"
+    },
+    {
+      "id": "2",
+      "first": "Dima",
+      "lastname": "Kirilov",
+      "age": 29,
+      "currency": "EUR",
+      "country": "Belarus",
+      "city": "Polotsk",
+      "username": "kiriev",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Code-1076536.jpg"
+    }
+  ]
 }
