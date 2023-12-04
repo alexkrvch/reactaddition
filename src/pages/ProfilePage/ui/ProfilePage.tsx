@@ -1,4 +1,4 @@
-import { type FC, useCallback, useEffect } from 'react'
+import { type FC, useCallback } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './ProfilePage.module.scss'
 import {
@@ -23,6 +23,8 @@ import { type Currency } from 'ourEntities/Currency'
 import { type Country } from 'ourEntities/Country'
 import { Text, TextTheme } from 'shared/ui/Text/Text'
 import { useTranslation } from 'react-i18next'
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
+import { useParams } from 'react-router-dom'
 
 const reducers: ReducersList = {
     profile: profileReducer
@@ -45,6 +47,8 @@ const ProfilePage: FC<ProfilePageProps> = (props) => {
     const readonly = useSelector(getProfileReadonly)
     const validateError = useSelector(getProfileValidateErrors)
 
+    const { id } = useParams<{ id: string }>()
+
     const validaErrorTranslates = {
         [ValidateProfileError.SERVER_ERROR]: t('Произошла ошибка на сервере'),
         [ValidateProfileError.INCORRECT_USER_LASTNAME]: t('Некорректная фамилия'),
@@ -54,11 +58,11 @@ const ProfilePage: FC<ProfilePageProps> = (props) => {
         [ValidateProfileError.NO_DATA]: t('Нет данных')
     }
 
-    useEffect(() => {
-        if (_PROJECT_ !== 'storybook') {
-            dispatch(fetchProfileData())
+    useInitialEffect(() => {
+        if (id) {
+            dispatch(fetchProfileData(id))
         }
-    }, [dispatch])
+    })
 
     const onChangeFirstname = useCallback((value?: string) => {
         dispatch(profileActions.updateProfile({ first: value || '' }))

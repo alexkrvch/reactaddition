@@ -1,17 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { CommentCard } from './CommentCard'
+import { AddCommentForm } from './AddCommentForm'
 import { Theme } from 'app/providers/ThemeProvider'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import React from 'react'
 
 const meta = {
-    title: 'shared/CommentCard',
-    component: CommentCard,
+    title: 'shared/AddCommentForm',
+    component: AddCommentForm,
     parameters: {
         layout: 'fullscreen'
     },
     tags: ['autodocs']
-} satisfies Meta<typeof CommentCard>
+} satisfies Meta<typeof AddCommentForm>
 
 export default meta
 type Story = StoryObj<typeof meta>
