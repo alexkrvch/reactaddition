@@ -142,6 +142,24 @@
       "userId": "1",
       "text": "Heihei",
       "id": "UZB3_a0"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "Heihei 2",
+      "id": "O0oTxOP"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "Heihei3",
+      "id": "Cr4bO_k"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "test loader",
+      "id": "Fa77591"
     }
   ],
   "profile": [
@@ -158,7 +176,7 @@
     },
     {
       "id": "2",
-      "first": "Dima",
+      "first": "Dima2",
       "lastname": "Kirilov",
       "age": 29,
       "currency": "EUR",
