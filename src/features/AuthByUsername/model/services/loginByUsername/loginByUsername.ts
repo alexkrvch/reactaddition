@@ -28,7 +28,7 @@ export const loginByUsername =
                 localStorage.setItem(USER_LOCALSTORAGE_KEY, JSON.stringify(response.data))
                 dispatch(userActions.setAuthData(response.data))
                 if (extra.navigate) {
-                    extra.navigate('/profile')
+                    extra.navigate(`/profile/${response.data.id}`)
                 }
                 return response.data
             } catch (e) {
