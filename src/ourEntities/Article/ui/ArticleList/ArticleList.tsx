@@ -27,13 +27,14 @@ export const ArticleList: FC<ArticleListProps> = memo((props) => {
             <ArticleListItem
                 key={article.id}
                 article={article}
+                className={cls.card}
                 view={view}
             />
         )
     }
 
     return (
-        <div className={classNames(cls.ArticleList, {}, [className])}>
+        <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
             {articles.length > 0
                 ? articles.map(renderArticle)
                 : t('Ошибка загрузку статей')

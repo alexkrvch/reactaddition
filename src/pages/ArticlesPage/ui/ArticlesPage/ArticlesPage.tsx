@@ -1,7 +1,7 @@
-import { memo, type FC } from 'react'
+import { type FC, memo } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './ArticlesPage.module.scss'
-import { type Article, ArticleList } from 'ourEntities/Article'
+import { type Article, ArticleList, ArticleView } from 'ourEntities/Article'
 
 interface ArticlesPageProps {
     className?: string
@@ -14,6 +14,11 @@ const article = {
     img: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png',
     views: 1058,
     createdAt: '26.08.2023',
+    user: {
+        id: '1',
+        username: 'Heikun',
+        avatar: 'https://upload.wikimedia.org/wikipedia/commons/3/3d/Code-1076536.jpg'
+    },
     type: [
         'IT'
     ],
@@ -104,7 +109,17 @@ const ArticlesPage: FC<ArticlesPageProps> = (props) => {
 
     return (
         <div className={classNames(cls.ArticlesPage, {}, [className])}>
-            <ArticleList articles={[article]} />
+            <ArticleList
+                articles={
+                    new Array(16)
+                        .fill(0)
+                        .map((item, index) => ({
+                            ...article,
+                            id: String(index)
+                        }))
+                }
+                view={ArticleView.SMALL}
+            />
         </div>
     )
 }
