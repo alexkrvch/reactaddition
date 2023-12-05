@@ -15,6 +15,10 @@ const article = {
     views: 1058,
     createdAt: '26.08.2023',
     type: [ArticleType.IT],
+    user: {
+        id: '1',
+        username: 'Heikun'
+    },
     blocks: [
         {
             id: '1',

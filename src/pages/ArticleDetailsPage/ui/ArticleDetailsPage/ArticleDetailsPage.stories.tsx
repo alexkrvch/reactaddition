@@ -13,6 +13,10 @@ const article = {
     img: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png',
     views: 1058,
     createdAt: '26.08.2023',
+    user: {
+        id: '1',
+        username: 'Heikun'
+    },
     type: [ArticleType.IT],
     blocks: [
         {
