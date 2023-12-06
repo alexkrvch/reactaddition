@@ -16,7 +16,7 @@ interface ArticleListProps {
 const getSkeletons = (view: ArticleView): ReactNode => {
     return new Array(view === ArticleView.SMALL ? 9 : 3)
         .fill(0)
-        .map((index) => (
+        .map((item, index) => (
             <ArticleListItemSkeleton
                 key={index}
                 view={view}
@@ -58,7 +58,7 @@ export const ArticleList: FC<ArticleListProps> = memo((props) => {
         <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
             {articles.length > 0
                 ? articles.map(renderArticle)
-                : t('Ошибка загрузку статей')
+                : t('Ошибка загрузки статей')
             }
         </div>
     )
