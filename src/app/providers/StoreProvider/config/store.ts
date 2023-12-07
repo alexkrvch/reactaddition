@@ -12,13 +12,11 @@ import { counterReducer } from 'ourEntities/Counter'
 import { userReducer } from 'ourEntities/User'
 import { createReducerManager } from './reducerManager'
 import { apiInstance } from 'shared/api/api'
-import { type NavigateOptions, type To } from 'react-router-dom'
 import { type ToolkitStore } from '@reduxjs/toolkit/dist/configureStore'
 
 export function createReduxStore (
     initialState?: StateSchema,
-    asyncReducers?: ReducersMapObject<StateSchema>,
-    navigate?: (to: To, options?: NavigateOptions) => void
+    asyncReducers?: ReducersMapObject<StateSchema>
 ): ToolkitStore<
     StateSchema,
     AnyAction,
@@ -31,8 +29,7 @@ export function createReduxStore (
     }
 
     const extraArg: ThunkExtraArg = {
-        api: apiInstance,
-        navigate
+        api: apiInstance
     }
 
     const reducerManager: ReducerManager = createReducerManager(rootReducer)
