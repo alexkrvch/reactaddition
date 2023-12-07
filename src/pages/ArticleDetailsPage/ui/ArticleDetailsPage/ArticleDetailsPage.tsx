@@ -27,6 +27,7 @@ import {
 } from '../../model/services/addCommentForArticle/addCommentForArticle'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { RoutePath } from 'shared/config/routeConfig/routeConfig'
+import { Page } from 'shared/ui/Page/Page'
 
 interface ArticleDetailsPageProps {
     className?: string
@@ -72,7 +73,7 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount={true}>
-            <div className={classNames('', {}, [className])}>
+            <Page className={classNames('', {}, [className])}>
                 <Button
                     theme={ButtonTheme.OUTLINE}
                     onClick={onBackToList}
@@ -88,7 +89,7 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
                     isLoading={isLoading}
                     comments={comments}
                 />
-            </div>
+            </Page>
         </DynamicModuleLoader>
     )
 }

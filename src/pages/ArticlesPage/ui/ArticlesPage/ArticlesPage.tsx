@@ -15,6 +15,8 @@ import {
 } from '../../model/selectors/articlesPageSelectors'
 import { Text } from 'shared/ui/Text/Text'
 import { useTranslation } from 'react-i18next'
+import { Page } from 'shared/ui/Page/Page'
+import { fetchNextArticlesPage } from 'pages/ArticlesPage/model/services/fetchNextArticlesPage/fetchNextArticlesPage'
 
 interface ArticlesPageProps {
     className?: string
@@ -41,9 +43,15 @@ const ArticlesPage: FC<ArticlesPageProps> = (props) => {
         dispatch(articlesPageActions.setView(view))
     }, [dispatch])
 
+    const onLoadNextPart = useCallback(() => {
+        dispatch(fetchNextArticlesPage())
+    }, [dispatch])
+
     useInitialEffect(() => {
-        dispatch(fetchArticlesList())
         dispatch(articlesPageActions.initState())
+        dispatch(fetchArticlesList({
+            page: 1
+        }))
     })
 
     if (error) {
@@ -56,14 +64,17 @@ const ArticlesPage: FC<ArticlesPageProps> = (props) => {
 
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <div className={classNames(cls.ArticlesPage, {}, [className])}>
+            <Page
+                onScrollEnd={onLoadNextPart}
+                className={classNames(cls.ArticlesPage, {}, [className])}
+            >
                 <ArticleViewSelector view={view} onViewClick={onChangeView} />
                 <ArticleList
                     isLoading={isLoading}
                     articles={articles}
                     view={view}
                 />
-            </div>
+            </Page>
         </DynamicModuleLoader>
     )
 }
