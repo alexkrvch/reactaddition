@@ -31,7 +31,7 @@ export const NavBar: FC<NavBarProps> = memo(({ className }) => {
     }, [dispatch])
 
     if (authData) {
-        return (<div className={classNames(cls.navBar, {}, [className])}>
+        return (<header className={classNames(cls.navBar, {}, [className])}>
             <div className={cls.logo}>
                 {t('WebArcticFox')}
             </div>
@@ -41,11 +41,11 @@ export const NavBar: FC<NavBarProps> = memo(({ className }) => {
             >
                 {t('Выйти')}
             </Button>
-        </div>)
+        </header>)
     }
 
     return (
-        <div className={classNames(cls.navBar, {}, [className])}>
+        <header className={classNames(cls.navBar, {}, [className])}>
             <div className={cls.logo}>
                 {t('WebArcticFox')}
             </div>
@@ -61,6 +61,6 @@ export const NavBar: FC<NavBarProps> = memo(({ className }) => {
                 <LoginModal isOpen={isOpenModal} onClose={onCloseModal} />
             </Portal>
             }
-        </div>
+        </header>
     )
 })
