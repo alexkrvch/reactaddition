@@ -14,10 +14,12 @@ import { type AxiosInstance } from 'axios'
 import { type ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage'
 import { type AddCommentFormSchema } from 'features/addCommentForm'
 import { type ArticlesPageSchema } from 'pages/ArticlesPage'
+import { type ScrollSaveSchema } from 'features/ScrollSave'
 
 export interface StateSchema {
     counter: CounterSchema
     user: UserSchema
+    scrollSave: ScrollSaveSchema
 
     // Async reducers
     loginForm?: LoginSchema
