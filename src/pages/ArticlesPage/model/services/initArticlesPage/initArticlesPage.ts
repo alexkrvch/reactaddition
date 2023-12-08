@@ -23,9 +23,7 @@ export const initArticlesPage =
 
             if (!init) {
                 dispatch(articlesPageActions.initState())
-                dispatch(fetchArticlesList({
-                    page: 1
-                }))
+                dispatch(fetchArticlesList({}))
             }
         }
     )
