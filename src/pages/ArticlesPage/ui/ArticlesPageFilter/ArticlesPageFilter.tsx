@@ -7,13 +7,15 @@ import { articlesPageActions } from '../../model/slices/articlePageSlice'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useSelector } from 'react-redux'
 import {
-    getArticlesPageOrder,
+    getArticlesPageOrder, getArticlesPageSearch,
     getArticlesPageSort,
     getArticlesPageView
 } from '../../model/selectors/articlesPageSelectors'
 import { Card } from 'shared/ui/Card/Card'
 import { Input } from 'shared/ui/Input/Input'
 import { type SortOrder } from 'shared/types'
+import { fetchArticlesList } from 'pages/ArticlesPage/model/services/fetchArticlesList/fetchArticlesList'
+import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce'
 
 interface ArticlesPageFilterProps {
     className?: string
@@ -28,20 +30,39 @@ export const ArticlesPageFilter: FC<ArticlesPageFilterProps> = memo((props) => {
     const view = useSelector(getArticlesPageView)
     const sort = useSelector(getArticlesPageSort)
     const order = useSelector(getArticlesPageOrder)
+    const search = useSelector(getArticlesPageSearch)
 
     const dispatch = useAppDispatch()
 
+    const fetchData = useCallback(() => {
+        dispatch(fetchArticlesList({ replace: true }))
+    }, [dispatch])
+
+    const debouncedFetchData = useDebounce(fetchData, 1000)
+
     const onChangeView = useCallback((view: ArticleView) => {
         dispatch(articlesPageActions.setView(view))
-    }, [dispatch])
+        dispatch(articlesPageActions.setPage(1))
+        fetchData()
+    }, [dispatch, fetchData])
 
     const onChangeSort = useCallback((sort: ArticleSortField) => {
         dispatch(articlesPageActions.setSort(sort))
-    }, [dispatch])
+        dispatch(articlesPageActions.setPage(1))
+        fetchData()
+    }, [dispatch, fetchData])
 
     const onChangeOrder = useCallback((order: SortOrder) => {
         dispatch(articlesPageActions.setOrder(order))
-    }, [dispatch])
+        dispatch(articlesPageActions.setPage(1))
+        fetchData()
+    }, [dispatch, fetchData])
+
+    const onChangeSearch = useCallback((search: string) => {
+        dispatch(articlesPageActions.setSearch(search))
+        dispatch(articlesPageActions.setPage(1))
+        debouncedFetchData()
+    }, [dispatch, debouncedFetchData])
 
     return (
         <div className={classNames(cls.ArticlesPageFilter, {}, [className])}>
@@ -55,7 +76,11 @@ export const ArticlesPageFilter: FC<ArticlesPageFilterProps> = memo((props) => {
                 <ArticleViewSelector view={view} onViewClick={onChangeView} />
             </div>
             <Card className={cls.search}>
-                <Input placeholder={t('Поиск')} />
+                <Input
+                    placeholder={t('Поиск')}
+                    onChange={onChangeSearch}
+                    value={search}
+                />
             </Card>
         </div>
     )
