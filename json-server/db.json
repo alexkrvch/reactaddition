@@ -276,7 +276,8 @@
           ]
         }
       ]
-    },{
+    },
+    {
       "id": "6",
       "title": "Python news",
       "subtitle": "Что нового в JS за 2023 год? NEW",
@@ -285,7 +286,9 @@
       "createdAt": "21.11.2023",
       "userId": "1",
       "type": [
-        "IT", "ECONOMICS", "SCIENCE"
+        "IT",
+        "ECONOMICS",
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -354,7 +357,8 @@
       "createdAt": "29.01.2019",
       "userId": "1",
       "type": [
-        "IT", "SCIENCE"
+        "IT",
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -377,7 +381,8 @@
       "createdAt": "26.08.2023",
       "userId": "1",
       "type": [
-        "IT", "SCIENCE"
+        "IT",
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -423,7 +428,8 @@
       "createdAt": "26.08.2023",
       "userId": "1",
       "type": [
-        "IT", "ECONOMICS"
+        "IT",
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -469,7 +475,9 @@
       "createdAt": "26.08.2023",
       "userId": "1",
       "type": [
-        "IT", "SCIENCE", "ECONOMICS"
+        "IT",
+        "SCIENCE",
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -482,7 +490,8 @@
           ]
         }
       ]
-    },{
+    },
+    {
       "id": "14",
       "title": "PHP news",
       "subtitle": "Что нового в JS за 2023 год?",
@@ -514,7 +523,8 @@
       "createdAt": "26.08.2023",
       "userId": "1",
       "type": [
-        "IT", "SCIENCE"
+        "IT",
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -537,7 +547,8 @@
       "createdAt": "26.08.2023",
       "userId": "1",
       "type": [
-        "IT", "SCIENCE"
+        "IT",
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -560,7 +571,8 @@
       "createdAt": "26.08.2023",
       "userId": "1",
       "type": [
-        "IT", "ECONOMICS"
+        "IT",
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -629,6 +641,18 @@
       "userId": "1",
       "text": "Ruby top",
       "id": "QRHR6iF"
+    },
+    {
+      "articleId": "5",
+      "userId": "1",
+      "text": "fawfaw",
+      "id": "L6n872K"
+    },
+    {
+      "articleId": "5",
+      "userId": "1",
+      "text": "412",
+      "id": "ULiGocE"
     }
   ],
   "profile": [
