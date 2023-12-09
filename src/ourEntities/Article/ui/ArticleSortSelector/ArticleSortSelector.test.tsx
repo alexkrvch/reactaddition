@@ -1,10 +1,10 @@
 import { ArticleSortSelector } from './ArticleSortSelector'
-import { render } from '@testing-library/react'
 import { ArticleSortField } from 'ourEntities/Article'
+import { ComponentRender } from 'shared/lib/tests/ComponentRender/ComponentRender'
 
 describe('ArticleSortSelector component', () => {
     test('Create and test render', () => {
-        render(<ArticleSortSelector
+        ComponentRender(<ArticleSortSelector
             onChangeSort={() => {}}
             onChangeOrder={() => {}}
             sort={ArticleSortField.VIEWS}

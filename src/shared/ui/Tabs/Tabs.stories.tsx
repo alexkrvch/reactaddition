@@ -1,17 +1,36 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { ArticlesPageFilter } from './ArticlesPageFilter'
+import { Tabs } from './Tabs'
 import { Theme } from 'app/providers/ThemeProvider'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import React from 'react'
+import { action } from '@storybook/addon-actions'
 
 const meta = {
-    title: 'pages/Article/ArticlesPageFilter',
-    component: ArticlesPageFilter,
+    title: 'shared/Tabs',
+    component: Tabs,
     parameters: {
         layout: 'fullscreen'
     },
+    args: {
+        tabs: [
+            {
+                value: 'IT',
+                content: 'IT'
+            },
+            {
+                value: 'Politics',
+                content: 'Politics'
+            },
+            {
+                value: 'Business',
+                content: 'Business'
+            }
+        ],
+        onTabClick: action('onTabClick'),
+        value: 'Politics'
+    },
     tags: ['autodocs']
-} satisfies Meta<typeof ArticlesPageFilter>
+} satisfies Meta<typeof Tabs>
 
 export default meta
 type Story = StoryObj<typeof meta>

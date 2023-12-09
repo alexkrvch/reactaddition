@@ -32,7 +32,7 @@ export const ArticleListItem: FC<ArticleListItemProps> = memo((props) => {
         view
     } = props
 
-    const { t } = useTranslation()
+    const { t } = useTranslation('article')
     const [isHover, bindHover] = useHover()
     const navigate = useNavigate()
 
