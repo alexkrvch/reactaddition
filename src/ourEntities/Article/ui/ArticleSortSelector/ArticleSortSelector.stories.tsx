@@ -6,7 +6,7 @@ import React from 'react'
 import { ArticleSortField } from 'ourEntities/Article'
 
 const meta = {
-    title: 'shared/ArticleSortSelector',
+    title: 'entities/Article/ArticleSortSelector',
     component: ArticleSortSelector,
     parameters: {
         layout: 'fullscreen'

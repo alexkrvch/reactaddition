@@ -4,6 +4,7 @@ import cls from './ArticleList.module.scss'
 import { type Article, ArticleView } from '../../model/types/article'
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem'
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton'
+import { useTranslation } from 'react-i18next'
 
 interface ArticleListProps {
     className?: string
@@ -32,6 +33,8 @@ export const ArticleList: FC<ArticleListProps> = memo((props) => {
         isLoading
     } = props
 
+    const { t } = useTranslation('article')
+
     const renderArticle = (article: Article): ReactNode => {
         return (
             <ArticleListItem
@@ -40,6 +43,14 @@ export const ArticleList: FC<ArticleListProps> = memo((props) => {
                 className={cls.card}
                 view={view}
             />
+        )
+    }
+
+    if (!isLoading && !articles.length) {
+        return (
+            <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
+                {t('Статей по данному запросу не найдено')}
+            </div>
         )
     }
 

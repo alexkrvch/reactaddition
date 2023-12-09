@@ -1,6 +1,7 @@
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk'
 import { fetchArticlesList } from '../fetchArticlesList/fetchArticlesList'
 import { initArticlesPage } from './initArticlesPage'
+import { ArticleType } from 'ourEntities/Article'
 
 jest.mock('../fetchArticlesList/fetchArticlesList')
 
@@ -14,11 +15,12 @@ describe('initArticlesPage', () => {
                 limit: 5,
                 isLoading: false,
                 hasMore: true,
+                type: ArticleType.ALL,
                 _init: false
             }
         })
-
-        await thunk.callThunk()
+        const urlParams = new URLSearchParams(window.location.search)
+        await thunk.callThunk(urlParams)
 
         expect(thunk.dispatch).toBeCalledTimes(4)
         expect(fetchArticlesList).toBeCalled()
@@ -37,7 +39,8 @@ describe('initArticlesPage', () => {
             }
         })
 
-        await thunk.callThunk()
+        const urlParams = new URLSearchParams(window.location.search)
+        await thunk.callThunk(urlParams)
 
         expect(thunk.dispatch).toBeCalledTimes(2)
         expect(fetchArticlesList).not.toHaveBeenCalled()
