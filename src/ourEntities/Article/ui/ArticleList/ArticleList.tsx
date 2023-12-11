@@ -5,6 +5,8 @@ import { type Article, ArticleView } from '../../model/types/article'
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem'
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton'
 import { useTranslation } from 'react-i18next'
+import { Virtuoso } from 'react-virtuoso'
+import { PAGE_ID } from 'widgets/Page/Page'
 
 interface ArticleListProps {
     className?: string
@@ -57,9 +59,27 @@ export const ArticleList: FC<ArticleListProps> = memo((props) => {
         )
     }
 
+    const isBig = view === ArticleView.BIG
+
     return (
+    // <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
+    //     {articles.length > 0
+    //         ? articles.map(renderArticle)
+    //         : null
+    //     }
+    //     {isLoading && getSkeletons(view)}
+    // </div>
         <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-            {articles.length > 0
+            {isBig && <Virtuoso
+                style={{ height: 500 }}
+                customScrollParent={document.getElementById(PAGE_ID) as HTMLElement}
+                data={articles}
+                itemContent={(_, article) => (
+                    renderArticle(article)
+                )}
+            />}
+
+            {!isBig && articles.length > 0
                 ? articles.map(renderArticle)
                 : null
             }
