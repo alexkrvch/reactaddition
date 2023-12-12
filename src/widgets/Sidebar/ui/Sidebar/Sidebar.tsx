@@ -8,6 +8,7 @@ import { SidebarItem } from '../SidebarItem/SidebarItem'
 import { type SidebarItemType } from '../../model/types/sidebar'
 import { useSelector } from 'react-redux'
 import { getSidebarItems } from '../../model/selectors/getSidebarItems'
+import { VStack } from 'shared/ui/Stack/VStack/VStack'
 
 interface SidebarProps {
     className?: string
@@ -37,9 +38,9 @@ export const Sidebar: FC<SidebarProps> = memo(({ className }) => {
                 { [cls.collapsed]: collapsed },
                 [className])}
         >
-            <div className={cls.menu}>
+            <VStack gap={'8'} className={cls.menu}>
                 { itemsList }
-            </div>
+            </VStack>
             <Button
                 className={cls.collapseBtn}
                 data-testid="sidebar-toggle"
