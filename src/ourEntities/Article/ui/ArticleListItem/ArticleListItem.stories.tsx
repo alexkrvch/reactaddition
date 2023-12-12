@@ -3,8 +3,7 @@ import { ArticleListItem } from './ArticleListItem'
 import { Theme } from 'app/providers/ThemeProvider'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import React from 'react'
-import { type Article, ArticleView } from 'ourEntities/Article'
-import { ArticleBlockType, ArticleType } from 'ourEntities/Article/model/types/article'
+import { type Article, ArticleBlockType, ArticleType, ArticleView } from '../../model/types/article'
 import blankImg from 'shared/assets/png/150x150.png'
 
 const article = {

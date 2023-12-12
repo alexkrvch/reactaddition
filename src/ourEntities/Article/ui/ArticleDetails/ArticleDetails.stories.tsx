@@ -4,7 +4,7 @@ import { Theme } from 'app/providers/ThemeProvider'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import React from 'react'
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator'
-import { ArticleBlockType, ArticleType } from 'ourEntities/Article/model/types/article'
+import { ArticleBlockType, ArticleType } from '../../model/types/article'
 import blankImg from 'shared/assets/png/150x150.png'
 
 const article = {

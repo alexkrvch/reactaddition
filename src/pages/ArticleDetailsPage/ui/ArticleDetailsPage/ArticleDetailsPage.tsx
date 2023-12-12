@@ -20,7 +20,7 @@ import { getArticleRecommend } from '../../model/slices/articleDetailsRecommendS
 import { getArticleRecommendIsLoading } from '../../model/selectors/recommend'
 import { fetchArticleRecommend } from '../../model/services/fetchArticleRecommend/fetchArticleRecommend'
 import { articleDetailsPageReducer } from '../../model/slices'
-import { ArticleDetailsPageHeader } from 'pages/ArticleDetailsPage/ui/ArticleDetailsPageHeader/ArticleDetailsPageHeader'
+import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader'
 
 interface ArticleDetailsPageProps {
     className?: string

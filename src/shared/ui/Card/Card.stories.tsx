@@ -3,7 +3,7 @@ import { Card } from './Card'
 import { Theme } from 'app/providers/ThemeProvider'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import React from 'react'
-import { Text } from 'shared/ui/Text/Text'
+import { Text } from '../../ui/Text/Text'
 
 const meta = {
     title: 'shared/Card',
