@@ -3,7 +3,7 @@ import { ArticleSortSelector } from './ArticleSortSelector'
 import { Theme } from 'app/providers/ThemeProvider'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import React from 'react'
-import { ArticleSortField } from 'ourEntities/Article'
+import { ArticleSortField } from '../../model/types/article'
 
 const meta = {
     title: 'entities/Article/ArticleSortSelector',

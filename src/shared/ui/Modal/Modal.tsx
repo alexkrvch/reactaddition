@@ -10,7 +10,7 @@ import {
 import { classNames, type Mods } from 'shared/lib/classNames/classNames'
 import cls from './Modal.module.scss'
 import { useTheme } from 'app/providers/ThemeProvider'
-import { Portal } from 'shared/ui/Portal/Portal'
+import { Portal } from '../Portal/Portal'
 
 interface ModalProps {
     className?: string

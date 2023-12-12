@@ -10,7 +10,7 @@ import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import {
     fetchArticleById
-} from 'ourEntities/Article/model/services/fetchArticleById/fetchArticleById'
+} from '../../model/services/fetchArticleById/fetchArticleById'
 import { useSelector } from 'react-redux'
 import {
     getArticleDetailsData,
@@ -26,13 +26,13 @@ import { Icon } from 'shared/ui/Icon/Icon'
 import { ArticleBlockType, type ArticleBlock } from '../../model/types/article'
 import {
     ArticleCodeBlockComponent
-} from 'ourEntities/Article/ui/ArticleCodeBlockComponent/ArticleCodeBlockComponent'
+} from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent'
 import {
     ArticleImageBlockComponent
-} from 'ourEntities/Article/ui/ArticleImageBlockComponent/ArticleImageBlockComponent'
+} from '../ArticleImageBlockComponent/ArticleImageBlockComponent'
 import {
     ArticleTextBlockComponent
-} from 'ourEntities/Article/ui/ArticleTextBlockComponent/ArticleTextBlockComponent'
+} from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 
 interface ArticleDetailsProps {

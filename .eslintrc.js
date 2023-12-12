@@ -27,7 +27,8 @@ module.exports = {
         "react",
         "@typescript-eslint",
         "i18next",
-        "react-hooks"
+        "react-hooks",
+        "heikun-eslint-checker"
     ],
     "rules": {
         'react/jsx-indent': [2, 4],
@@ -49,6 +50,7 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'error',
         '@typescript-eslint/explicit-function-return-type': 'warn',
         'react/prop-types': 'off',
+        'heikun-eslint-checker/path-checker': 'error',
         'i18next/no-literal-string': [
             'error',
             {markupOnly: true}
