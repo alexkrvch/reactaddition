@@ -1,28 +1,35 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { ListBox } from './ListBox'
+import { Dropdown } from './Dropdown'
 import { Theme } from 'app/providers/ThemeProvider'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import React from 'react'
+import { Button } from '../Button/Button'
 
 const meta = {
-    title: 'shared/ListBox',
-    component: ListBox,
+    title: 'shared/Dropdown',
+    component: Dropdown,
     parameters: {
         layout: 'fullscreen'
     },
     args: {
-        defaultValue: 'Выберите значение',
-        onChange: (value: string) => {},
-        value: undefined,
+        trigger: <Button>12345</Button>,
         items: [
-            { value: '1', content: '123' },
-            { value: '2', content: '234', disabled: true },
-            { value: '3', content: '345' },
-            { value: '4', content: '456' }
+            {
+                id: 1,
+                content: 'First'
+            },
+            {
+                id: 2,
+                content: 'Second'
+            },
+            {
+                id: 3,
+                content: 'Third'
+            }
         ]
     },
     tags: ['autodocs']
-} satisfies Meta<typeof ListBox>
+} satisfies Meta<typeof Dropdown>
 
 export default meta
 type Story = StoryObj<typeof meta>
@@ -51,28 +58,4 @@ export const PrimaryOrange: Story = {
             </ThemeDecorator>
         )
     ]
-}
-
-export const PrimaryTopLeft: Story = {
-    args: {
-        direction: 'topLeft'
-    }
-}
-
-export const PrimaryTopRight: Story = {
-    args: {
-        direction: 'topRight'
-    }
-}
-
-export const PrimaryBottomLeft: Story = {
-    args: {
-        direction: 'bottomLeft'
-    }
-}
-
-export const PrimaryBottomRight: Story = {
-    args: {
-        direction: 'bottomRight'
-    }
 }
