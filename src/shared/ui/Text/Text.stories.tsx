@@ -51,6 +51,44 @@ export const PrimaryOrange: Story = {
     ]
 }
 
+export const PrimaryLightS: Story = {
+    args: {
+        title: 'Title lorem',
+        text: 'Desc text for something',
+        size: TextSize.S
+    }
+}
+
+export const PrimaryDarkS: Story = {
+    args: {
+        title: 'Title lorem',
+        text: 'Desc text for something',
+        size: TextSize.S
+    },
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.DARK}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}
+
+export const PrimaryOrangeS: Story = {
+    args: {
+        title: 'Title lorem',
+        text: 'Desc text for something',
+        size: TextSize.S
+    },
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.ORANGE}>
+                <Story />
+            </ThemeDecorator>
+        )
+    ]
+}
+
 export const PrimaryLightL: Story = {
     args: {
         title: 'Title lorem',
