@@ -14,6 +14,7 @@ import { createReducerManager } from './reducerManager'
 import { apiInstance } from 'shared/api/api'
 import { type ToolkitStore } from '@reduxjs/toolkit/dist/configureStore'
 import { scrollSaveReducer } from 'features/ScrollSave'
+import { rtkApi } from 'shared/api/rtkApi'
 
 export function createReduxStore (
     initialState?: StateSchema,
@@ -27,7 +28,8 @@ export function createReduxStore (
         ...asyncReducers,
         counter: counterReducer,
         user: userReducer,
-        scrollSave: scrollSaveReducer
+        scrollSave: scrollSaveReducer,
+        [rtkApi.reducerPath]: rtkApi.reducer
     }
 
     const extraArg: ThunkExtraArg = {
@@ -44,12 +46,13 @@ export function createReduxStore (
             thunk: {
                 extraArgument: extraArg
             }
-        })
+        }).concat(rtkApi.middleware)
     })
 
     // @ts-expect-error ignore for some time
     store.reducerManager = reducerManager
 
+    // @ts-expect-error ignore for fix later
     return store
 }
 
