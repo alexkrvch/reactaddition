@@ -132,7 +132,7 @@ const article = {
 }
 
 const meta = {
-    title: 'pages/ArticleDetailsPage',
+    title: 'pages/articleDetails/ArticleDetailsPage',
     component: ArticleDetailsPage,
     parameters: {
         layout: 'fullscreen'

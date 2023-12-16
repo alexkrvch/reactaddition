@@ -1,6 +1,5 @@
 import { type CounterSchema } from 'ourEntities/Counter'
 import { type UserSchema } from 'ourEntities/User'
-import { type ProfileSchema } from 'ourEntities/Profile'
 import { type LoginSchema } from 'features/AuthByUsername'
 import { type ArticleDetailsSchema } from 'ourEntities/Article'
 import {
@@ -18,6 +17,7 @@ import { type AddCommentFormSchema } from 'features/addCommentForm'
 import { type ArticlesPageSchema } from 'pages/ArticlesPage'
 import { type ScrollSaveSchema } from 'features/ScrollSave'
 import { type rtkApi } from 'shared/api/rtkApi'
+import { type ProfileSchema } from 'features/editableProfileCard'
 
 export interface StateSchema {
     counter: CounterSchema
