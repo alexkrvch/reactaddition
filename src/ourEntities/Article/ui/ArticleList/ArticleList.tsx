@@ -14,6 +14,7 @@ interface ArticleListProps {
     isLoading?: boolean
     view?: ArticleView
     target?: HTMLAttributeAnchorTarget
+    virtualized?: boolean
 }
 
 const getSkeletons = (view: ArticleView): ReactNode => {
@@ -34,7 +35,8 @@ export const ArticleList: FC<ArticleListProps> = memo((props) => {
         articles,
         view = ArticleView.SMALL,
         isLoading,
-        target
+        target,
+        virtualized = true
     } = props
 
     const { t } = useTranslation('article')
@@ -70,7 +72,7 @@ export const ArticleList: FC<ArticleListProps> = memo((props) => {
     //     {isLoading && getSkeletons(view)}
     // </div>
         <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-            {isBig && <Virtuoso
+            {isBig && virtualized && <Virtuoso
                 style={{ height: 500 }}
                 customScrollParent={document.getElementById(PAGE_ID) as HTMLElement}
                 data={articles}
@@ -79,10 +81,16 @@ export const ArticleList: FC<ArticleListProps> = memo((props) => {
                 )}
             />}
 
+            {isBig && virtualized && articles.length > 0
+                ? articles.map(renderArticle)
+                : null
+            }
+
             {!isBig && articles.length > 0
                 ? articles.map(renderArticle)
                 : null
             }
+
             {isLoading && getSkeletons(view)}
         </div>
     )
