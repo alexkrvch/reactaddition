@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
-import { memo, useCallback } from 'react'
+import { type FC, memo, useCallback } from 'react'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useSelector } from 'react-redux'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
@@ -33,7 +33,7 @@ const reducers: ReducersList = {
     profile: profileReducer
 }
 
-export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
+export const EditableProfileCard: FC<EditableProfileCardProps> = memo((props) => {
     const {
         className,
         id
@@ -108,6 +108,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
                         key={err}
                         theme={TextTheme.ERROR}
                         text={validaErrorTranslates[err]}
+                        data-testid={'EditableProfileCard.Error'}
                     />
                 ))}
                 <ProfileCard
