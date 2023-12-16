@@ -5,7 +5,7 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import React from 'react'
 
 const meta = {
-    title: 'shared/ArticleCreatePage',
+    title: 'pages/ArticleCreatePage',
     component: ArticleCreatePage,
     parameters: {
         layout: 'fullscreen'

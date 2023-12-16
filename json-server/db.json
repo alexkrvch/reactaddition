@@ -659,9 +659,9 @@
     {
       "id": "1",
       "first": "Alex",
-      "lastname": "Krauchanka )",
+      "lastname": "Krauchanka",
       "age": 29,
-      "currency": "RUB",
+      "currency": "USD",
       "country": "Georgia",
       "city": "Polotsk",
       "username": "heikun",

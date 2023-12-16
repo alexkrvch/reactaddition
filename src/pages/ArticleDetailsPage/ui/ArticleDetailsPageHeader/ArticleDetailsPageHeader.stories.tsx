@@ -5,7 +5,7 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import React from 'react'
 
 const meta = {
-    title: 'shared/ArticleDetailsPageHeader',
+    title: 'pages/articleDetails/ArticleDetailsPageHeader',
     component: ArticleDetailsPageHeader,
     parameters: {
         layout: 'fullscreen'

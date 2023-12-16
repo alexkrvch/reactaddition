@@ -13,6 +13,7 @@ import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEf
 import {
     fetchCommentsByArticleId
 } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
+import { VStack } from 'shared/ui/Stack'
 
 interface ArticleDetailsCommentsProps {
     className?: string
@@ -39,7 +40,7 @@ export const ArticleDetailsComments: FC<ArticleDetailsCommentsProps> = memo((pro
     const isLoading = useSelector(getArticleCommentsIsLoading)
 
     return (
-        <div className={classNames('', {}, [className])}>
+        <VStack gap={'8'} max className={classNames('', {}, [className])}>
             <Text
                 size={TextSize.L}
                 title={t('Комментарии')}
@@ -51,6 +52,6 @@ export const ArticleDetailsComments: FC<ArticleDetailsCommentsProps> = memo((pro
                 isLoading={isLoading}
                 comments={comments}
             />
-        </div>
+        </VStack>
     )
 })
