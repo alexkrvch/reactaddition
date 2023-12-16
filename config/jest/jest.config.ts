@@ -43,7 +43,16 @@ const config: Config = {
         _IS_DEV_: true,
         _API_: '',
         _PROJECT_: 'jest'
-    }
+    },
+    reporters: [
+        'default',
+        ['jest-html-reporters', {
+            publicPath: '<rootDir>/reports/unit',
+            filename: 'report.html',
+            openReport: true,
+            inlineSource: true
+        }]
+    ]
 
     // All imported modules in your tests should be mocked automatically
     // automock: false,
