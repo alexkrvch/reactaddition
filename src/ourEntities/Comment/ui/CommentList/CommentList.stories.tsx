@@ -3,6 +3,7 @@ import { CommentList } from './CommentList'
 import { Theme } from 'app/providers/ThemeProvider'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import React from 'react'
+import { UserRole } from 'ourEntities/User'
 
 const meta = {
     title: 'entities/Comment/CommentList',
@@ -15,12 +16,12 @@ const meta = {
             {
                 id: '1',
                 text: 'Hello world',
-                user: { id: '1', username: 'Valera' }
+                user: { id: '1', username: 'Valera', roles: [UserRole.USER] }
             },
             {
                 id: '2',
                 text: 'Hi, its Dmitry',
-                user: { id: '2', username: 'Dmitry' }
+                user: { id: '2', username: 'Dmitry', roles: [UserRole.USER] }
             }
         ]
     },

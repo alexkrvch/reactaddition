@@ -2,8 +2,8 @@
 /build
 /.cache
 /.idea
+/reports
 /storybook-static
 /.loki/report.html
 /.loki/report.json
 /.DS_Store
-/reports

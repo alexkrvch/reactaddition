@@ -3,6 +3,7 @@ import { CommentCard } from './CommentCard'
 import { Theme } from 'app/providers/ThemeProvider'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import React from 'react'
+import { UserRole } from 'ourEntities/User'
 
 const meta = {
     title: 'entities/Comment/CommentCard',
@@ -14,7 +15,7 @@ const meta = {
         comment: {
             id: '1',
             text: 'Hello world',
-            user: { id: '1', username: 'Valera' }
+            user: { id: '1', username: 'Valera', roles: [UserRole.USER] }
         }
     },
     tags: ['autodocs']
