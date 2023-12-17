@@ -16,14 +16,21 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
+      "roles": ["ADMIN"],
       "avatar": "https://via.placeholder.com/150x150"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "GUEST",
+      "roles": ["USER"],
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
+    },
+    {
+      "id": "3",
+      "username": "manager",
+      "password": "123",
+      "roles": ["MANAGER"],
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
     }
   ],
@@ -669,6 +676,17 @@
     },
     {
       "id": "2",
+      "first": "Dima2",
+      "lastname": "Kirilov",
+      "age": 29,
+      "currency": "EUR",
+      "country": "Belarus",
+      "city": "Polotsk",
+      "username": "kiriev",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Code-1076536.jpg"
+    },
+    {
+      "id": "3",
       "first": "Dima2",
       "lastname": "Kirilov",
       "age": 29,

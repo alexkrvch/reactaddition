@@ -5,6 +5,7 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import React from 'react'
 import { type Article, ArticleBlockType, ArticleType, ArticleView } from '../../model/types/article'
 import blankImg from 'shared/assets/png/150x150.png'
+import { UserRole } from 'ourEntities/User'
 
 const article = {
     id: '1',
@@ -16,7 +17,8 @@ const article = {
     type: [ArticleType.IT],
     user: {
         id: '1',
-        username: 'Heikun'
+        username: 'Heikun',
+        roles: [UserRole.USER]
     },
     blocks: [
         {

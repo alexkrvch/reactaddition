@@ -3,9 +3,9 @@ import { ArticleList } from './ArticleList'
 import { Theme } from 'app/providers/ThemeProvider'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import React from 'react'
-import { type Article, ArticleView } from '../../model/types/article'
-import { ArticleBlockType, ArticleType } from '../../model/types/article'
+import { type Article, ArticleBlockType, ArticleType, ArticleView } from '../../model/types/article'
 import blankImg from 'shared/assets/png/150x150.png'
+import { UserRole } from 'ourEntities/User'
 
 const article = {
     id: '1',
@@ -17,7 +17,8 @@ const article = {
     type: [ArticleType.IT],
     user: {
         id: '1',
-        username: 'Heikun'
+        username: 'Heikun',
+        roles: [UserRole.ADMIN]
     },
     blocks: [
         {

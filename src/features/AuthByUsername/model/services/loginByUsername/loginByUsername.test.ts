@@ -1,10 +1,10 @@
 import { loginByUsername } from './loginByUsername'
-import { userActions } from 'ourEntities/User'
+import { userActions, UserRole } from 'ourEntities/User'
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk'
 
 describe('loginByUsername', () => {
     test('Test auth by username and get result | success', async () => {
-        const userValue = { username: '123', id: '1' }
+        const userValue = { username: '123', id: '1', roles: [UserRole.ADMIN] }
 
         const thunk = new TestAsyncThunk(loginByUsername)
         thunk.api.post.mockReturnValue(Promise.resolve({ data: userValue }))
@@ -18,7 +18,7 @@ describe('loginByUsername', () => {
     })
 
     test('Test auth by username and get result with incorrect data | error', async () => {
-        const userValue = { username: '123', id: '1' }
+        const userValue = { username: '123', id: '1', roles: [UserRole.ADMIN] }
 
         const thunk = new TestAsyncThunk(loginByUsername)
         thunk.api.post.mockReturnValue(Promise.resolve({ status: 403 }))
