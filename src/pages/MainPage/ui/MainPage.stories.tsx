@@ -3,6 +3,7 @@ import { Theme } from 'app/providers/ThemeProvider'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import React from 'react'
 import MainPage from './MainPage'
+import { StoreProvider } from 'app/providers/StoreProvider'
 
 const meta = {
     title: 'pages/MainPage',
@@ -17,16 +18,27 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const MainPageLight: Story = {
-    args: {}
+    args: {},
+    decorators: [
+        (Story) => (
+            <StoreProvider>
+                <ThemeDecorator theme={Theme.LIGHT}>
+                    <Story />
+                </ThemeDecorator>
+            </StoreProvider>
+        )
+    ]
 }
 
 export const MainPageDark: Story = {
     args: {},
     decorators: [
         (Story) => (
-            <ThemeDecorator theme={Theme.DARK}>
-                <Story />
-            </ThemeDecorator>
+            <StoreProvider>
+                <ThemeDecorator theme={Theme.DARK}>
+                    <Story />
+                </ThemeDecorator>
+            </StoreProvider>
         )
     ]
 }
@@ -35,9 +47,11 @@ export const MainPageOrange: Story = {
     args: {},
     decorators: [
         (Story) => (
-            <ThemeDecorator theme={Theme.ORANGE}>
-                <Story />
-            </ThemeDecorator>
+            <StoreProvider>
+                <ThemeDecorator theme={Theme.ORANGE}>
+                    <Story />
+                </ThemeDecorator>
+            </StoreProvider>
         )
     ]
 }
