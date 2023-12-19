@@ -4,7 +4,7 @@ import { type Article } from '../../types/article'
 
 export const fetchArticleById =
     // eslint-disable-next-line @typescript-eslint/no-invalid-void-type
-    createAsyncThunk<Article, string, ThunkConfig<string>>(
+    createAsyncThunk<Article, string | undefined, ThunkConfig<string>>(
         'articleDetails/fetchArticleById',
         async (articleId, thunkAPI) => {
             const {
