@@ -1,6 +1,5 @@
 import { type FC, memo } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
-import { useTranslation } from 'react-i18next'
 import { ArticleDetails } from 'ourEntities/Article'
 import { useParams } from 'react-router-dom'
 import { DynamicModuleLoader, type ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
@@ -24,16 +23,7 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
         className
     } = props
 
-    const { t } = useTranslation('article')
     const { id } = useParams<{ id: string }>()
-
-    if (!id) {
-        return (
-            <div className={classNames('', {}, [className])}>
-                {t('Статья не найдена')}
-            </div>
-        )
-    }
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount={true}>
