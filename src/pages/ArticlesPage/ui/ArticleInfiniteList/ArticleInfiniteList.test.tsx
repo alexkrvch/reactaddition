@@ -4,6 +4,5 @@ import { ComponentRender } from 'shared/lib/tests/ComponentRender/ComponentRende
 describe('ArticleInfiniteList component', () => {
     test('Create and test render', () => {
         ComponentRender(<ArticleInfiniteList/>)
-        // expect(screen.getByText('TEST')).toBeInTheDocument()
     })
 })

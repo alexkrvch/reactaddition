@@ -20,6 +20,5 @@ const items = [
 describe('Dropdown component', () => {
     test('Create and test render', () => {
         render(<Dropdown trigger={<Button>12345</Button>} items={items}/>)
-        // expect(screen.getByText('TEST')).toBeInTheDocument()
     })
 })
