@@ -4,6 +4,5 @@ import { ComponentRender } from 'shared/lib/tests/ComponentRender/ComponentRende
 describe('ArticleDetailsComments component', () => {
     test('Create and test render', () => {
         ComponentRender(<ArticleDetailsComments id={'1'}/>)
-        // expect(screen.getByText('TEST')).toBeInTheDocument()
     })
 })

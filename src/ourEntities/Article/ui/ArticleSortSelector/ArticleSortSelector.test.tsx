@@ -10,6 +10,5 @@ describe('ArticleSortSelector component', () => {
             sort={ArticleSortField.VIEWS}
             order={'asc'}
         />)
-        // expect(screen.getByText('TEST')).toBeInTheDocument()
     })
 })

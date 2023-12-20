@@ -4,6 +4,5 @@ import { ComponentRender } from 'shared/lib/tests/ComponentRender/ComponentRende
 describe('ArticleEditPage component', () => {
     test('Create and test render', () => {
         ComponentRender(<ArticleEditPage/>)
-        // expect(screen.getByText('TEST')).toBeInTheDocument()
     })
 })

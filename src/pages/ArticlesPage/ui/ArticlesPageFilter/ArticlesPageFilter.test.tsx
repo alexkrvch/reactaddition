@@ -4,6 +4,5 @@ import { ComponentRender } from 'shared/lib/tests/ComponentRender/ComponentRende
 describe('ArticlesPageFilter component', () => {
     test('Create and test render', () => {
         ComponentRender(<ArticlesPageFilter/>)
-        // expect(screen.getByText('TEST')).toBeInTheDocument()
     })
 })

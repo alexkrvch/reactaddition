@@ -4,6 +4,5 @@ import { ComponentRender } from 'shared/lib/tests/ComponentRender/ComponentRende
 describe('ArticleDetailsPageHeader component', () => {
     test('Create and test render', () => {
         ComponentRender(<ArticleDetailsPageHeader/>)
-        // expect(screen.getByText('TEST')).toBeInTheDocument()
     })
 })
