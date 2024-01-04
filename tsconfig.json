@@ -9,7 +9,8 @@
     "strict": true,
     "moduleResolution": "node",
     "esModuleInterop": true, // common js as packet require
-    "allowSyntheticDefaultImports": true, // import * as to default import
+    "allowSyntheticDefaultImports": true, // import * as to default import,
+    "isolatedModules": true,
     "baseUrl": ".",
     "paths": {
       "*": ["./src/*"]

@@ -1,8 +1,9 @@
 import { profileActions, profileReducer } from './profileSlice'
-import { type ProfileSchema, ValidateProfileError } from '../types/editableProfileCardSchema'
+import { type ProfileSchema } from '../types/editableProfileCardSchema'
 import { Country } from 'ourEntities/Country'
 import { Currency } from 'ourEntities/Currency'
 import { updateProfileData } from '../services/updateProfileData/updateProfileData'
+import { ValidateProfileError } from '../consts/consts'
 
 const data = {
     username: 'heikun',
