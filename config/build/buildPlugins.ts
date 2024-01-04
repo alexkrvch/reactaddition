@@ -2,6 +2,7 @@ import HTMLWebpackPlugin from 'html-webpack-plugin'
 import webpack from 'webpack'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin'
+import CircularDependencyPlugin from 'circular-dependency-plugin'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 import { type BuildOptions } from './types/config'
 import CopyPlugin from 'copy-webpack-plugin'
@@ -30,6 +31,10 @@ export function buildPlugins ({
             patterns: [
                 { from: paths.locales, to: paths.buildLocales }
             ]
+        }),
+        new CircularDependencyPlugin({
+            exclude: /node_modules/,
+            failOnError: true
         })
     ]
 
