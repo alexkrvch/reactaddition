@@ -16,21 +16,27 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": ["ADMIN"],
+      "roles": [
+        "ADMIN"
+      ],
       "avatar": "https://via.placeholder.com/150x150"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "roles": ["USER"],
+      "roles": [
+        "USER"
+      ],
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
     },
     {
       "id": "3",
       "username": "manager",
       "password": "123",
-      "roles": ["MANAGER"],
+      "roles": [
+        "MANAGER"
+      ],
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
     }
   ],
@@ -660,6 +666,12 @@
       "userId": "1",
       "text": "412",
       "id": "ULiGocE"
+    },
+    {
+      "articleId": "5",
+      "userId": "1",
+      "text": "ffff",
+      "id": "FULfbeH"
     }
   ],
   "profile": [
@@ -667,9 +679,9 @@
       "id": "1",
       "first": "Alex",
       "lastname": "Krauchanka",
-      "age": 29,
-      "currency": "USD",
-      "country": "Georgia",
+      "age": 30,
+      "currency": "RUB",
+      "country": "Ukraine",
       "city": "Polotsk",
       "username": "heikun",
       "avatar": "https://via.placeholder.com/150x150"

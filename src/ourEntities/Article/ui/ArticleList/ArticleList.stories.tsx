@@ -3,9 +3,10 @@ import { ArticleList } from './ArticleList'
 import { Theme } from 'app/providers/ThemeProvider'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import React from 'react'
-import { type Article, ArticleBlockType, ArticleType, ArticleView } from '../../model/types/article'
+import { type Article } from '../../model/types/article'
 import blankImg from 'shared/assets/png/150x150.png'
 import { UserRole } from 'ourEntities/User'
+import { ArticleView, ArticleBlockType, ArticleType } from '../../model/consts/consts'
 
 const article = {
     id: '1',

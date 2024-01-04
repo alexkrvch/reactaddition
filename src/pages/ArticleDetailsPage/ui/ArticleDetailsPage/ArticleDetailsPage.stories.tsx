@@ -3,8 +3,8 @@ import ArticleDetailsPage from './ArticleDetailsPage'
 import { Theme } from 'app/providers/ThemeProvider'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import React from 'react'
-import { ArticleBlockType, ArticleType } from 'ourEntities/Article/model/types/article'
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator'
+import { ArticleBlockType, ArticleType } from 'ourEntities/Article'
 
 const article = {
     id: '1',
