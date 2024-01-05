@@ -11,12 +11,12 @@ const article: Article = {
     id: '1',
     img: '',
     createdAt: '',
-    views: 123,
-    user: { id: '1', username: '123', roles: [UserRole.USER] },
+    views: 45,
+    user: { id: '1', username: 'heikun', roles: [UserRole.USER] },
     blocks: [],
     type: [],
-    title: '123',
-    subtitle: 'asfsa'
+    title: 'React js its future',
+    subtitle: 'What new in React'
 }
 
 const meta = {
