@@ -15,7 +15,7 @@ const meta = {
     args: {
         onChangeSort: () => {},
         onChangeOrder: () => {},
-        sort: ArticleSortField.TITLE,
+        sort: ArticleSortField.CREATED,
         order: 'asc'
     },
     tags: ['autodocs']
