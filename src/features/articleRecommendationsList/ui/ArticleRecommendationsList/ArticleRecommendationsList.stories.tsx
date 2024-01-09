@@ -12,7 +12,7 @@ const article: Article = {
     img: '',
     createdAt: '',
     views: 45,
-    user: { id: '1', username: 'heikun', roles: [UserRole.USER] },
+    user: { id: '1', username: 'Heikun', roles: [UserRole.USER] },
     blocks: [],
     type: [],
     title: 'React js its future',
