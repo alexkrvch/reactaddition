@@ -15,7 +15,7 @@ const article: Article = {
     user: { id: '1', username: 'Heikun', roles: [UserRole.USER] },
     blocks: [],
     type: [],
-    title: 'React JS react - future',
+    title: 'React JS react future or not?',
     subtitle: 'What new in React'
 }
 
