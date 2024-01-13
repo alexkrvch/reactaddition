@@ -65,13 +65,6 @@ export const ArticleList: FC<ArticleListProps> = memo((props) => {
     const isBig = view === ArticleView.BIG
 
     return (
-    // <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-    //     {articles.length > 0
-    //         ? articles.map(renderArticle)
-    //         : null
-    //     }
-    //     {isLoading && getSkeletons(view)}
-    // </div>
         <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
             {isBig && virtualized && <Virtuoso
                 style={{ height: 500 }}
