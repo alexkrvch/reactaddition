@@ -24,9 +24,9 @@ export const CommentList: FC<CommentListProps> = memo((props) => {
     if (isLoading) {
         return (
             <VStack gap={'16'} max className={classNames('', {}, [className])}>
-                <CommentCard isLoading={true} />
-                <CommentCard isLoading={true} />
-                <CommentCard isLoading={true} />
+                <CommentCard isLoading={true}/>
+                <CommentCard isLoading={true}/>
+                <CommentCard isLoading={true}/>
             </VStack>
         )
     }
@@ -41,7 +41,7 @@ export const CommentList: FC<CommentListProps> = memo((props) => {
                         isLoading={isLoading}
                     />
                 ))
-                : <Text text={t('Комментариев нет')} />
+                : <Text text={t('Комментариев нет')}/>
             }
         </VStack>
     )

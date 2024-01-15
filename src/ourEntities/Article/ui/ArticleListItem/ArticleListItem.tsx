@@ -13,7 +13,7 @@ import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
 import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 import { AppLink } from 'shared/ui/AppLink/AppLink'
-import { ArticleView, ArticleBlockType } from '../../model/consts/consts'
+import { ArticleBlockType, ArticleView } from '../../model/consts/consts'
 
 interface ArticleListItemProps {
     className?: string
@@ -44,7 +44,7 @@ export const ArticleListItem: FC<ArticleListItemProps> = memo((props) => {
                 text={String(article.views)}
                 className={cls.views}
             />
-            <Icon Svg={EyeIcon} />
+            <Icon Svg={EyeIcon}/>
         </>
     )
 
