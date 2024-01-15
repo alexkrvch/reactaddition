@@ -53,10 +53,10 @@ export const CommentCard: FC<CommentCardProps> = memo((props) => {
     return (
         <VStack gap={'8'} max className={classNames(cls.CommentCard, {}, [className])}>
             <AppLink to={`${RoutePath.profile}${comment.user.id}`} className={cls.header}>
-                {comment.user.avatar ? <Avatar size={30} src={comment.user.avatar} /> : null }
-                <Text className={cls.username} title={comment.user.username} />
+                {comment.user.avatar ? <Avatar size={30} src={comment.user.avatar}/> : null}
+                <Text className={cls.username} title={comment.user.username}/>
             </AppLink>
-            <Text className={cls.text} text={comment.text} />
+            <Text className={cls.text} text={comment.text}/>
         </VStack>
     )
 })
