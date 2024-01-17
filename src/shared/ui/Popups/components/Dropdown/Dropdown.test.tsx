@@ -1,6 +1,6 @@
 import { Dropdown } from './Dropdown'
 import { render } from '@testing-library/react'
-import { Button } from '../Button/Button'
+import { Button } from '../../../Button/Button'
 import React from 'react'
 
 const items = [
