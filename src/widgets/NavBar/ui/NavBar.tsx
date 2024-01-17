@@ -5,13 +5,14 @@ import { useTranslation } from 'react-i18next'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { Portal } from 'shared/ui/Portal/Portal'
 import { LoginModal } from 'features/AuthByUsername'
-import { useDispatch, useSelector } from 'react-redux'
-import { getUserAuthData, isUserAdmin, isUserManager, userActions } from 'ourEntities/User'
+import { useSelector } from 'react-redux'
+import { getUserAuthData } from 'ourEntities/User'
 import { Text, TextTheme } from 'shared/ui/Text/Text'
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
 import { RoutePath } from 'shared/config/routeConfig/routeConfig'
-import { Dropdown } from 'shared/ui/Dropdown/Dropdown'
-import { Avatar } from 'shared/ui/Avatar/Avatar'
+import { HStack } from 'shared/ui/Stack'
+import { NotificationButton } from 'features/notificationButton'
+import { AvatarDropdown } from 'features/avatarDropdown'
 
 interface NavBarProps {
     className?: string
@@ -21,10 +22,6 @@ export const NavBar: FC<NavBarProps> = memo(({ className }) => {
     const { t } = useTranslation()
     const [isOpenModal, setIsOpenAM] = useState(false)
     const authData = useSelector(getUserAuthData)
-    const isAdmin = useSelector(isUserAdmin)
-    const isManager = useSelector(isUserManager)
-    const dispatch = useDispatch()
-    const isAdminPanelAvailable = isAdmin || isManager
 
     const onCloseModal = useCallback(() => {
         setIsOpenAM(false)
@@ -33,10 +30,6 @@ export const NavBar: FC<NavBarProps> = memo(({ className }) => {
     const onOpenModal = useCallback(() => {
         setIsOpenAM(true)
     }, [])
-
-    const onLogout = useCallback(() => {
-        dispatch(userActions.logout())
-    }, [dispatch])
 
     if (authData) {
         return (<header className={classNames(cls.navBar, {}, [className])}>
@@ -52,36 +45,16 @@ export const NavBar: FC<NavBarProps> = memo(({ className }) => {
             >
                 {t('Создать статью')}
             </AppLink>
-            <Dropdown
-                className={cls.authInfo}
-                trigger={<Avatar size={30} src={authData.avatar} />}
-                direction={'bottomLeft'}
-                items={[
-                    ...(isAdminPanelAvailable
-                        ? [{
-                            id: 1,
-                            content: t('Админка'),
-                            href: RoutePath.admin_panel
-                        }]
-                        : []),
-                    {
-                        id: 2,
-                        content: t('Профиль'),
-                        href: RoutePath.profile + authData.id
-                    },
-                    {
-                        id: 3,
-                        content: t('Выйти'),
-                        onClick: onLogout
-                    }
-                ]}
-            />
+            <HStack gap={'16'} className={cls.actions}>
+                <NotificationButton/>
+                <AvatarDropdown/>
+            </HStack>
         </header>)
     }
 
     return (
         <header className={classNames(cls.navBar, {}, [className])}>
-            <Text className={cls.appName} title={t('WebArcticFox')} />
+            <Text className={cls.appName} title={t('WebArcticFox')}/>
             <Button
                 theme={ButtonTheme.CLEAR_INVERTED}
                 onClick={onOpenModal}
@@ -90,9 +63,9 @@ export const NavBar: FC<NavBarProps> = memo(({ className }) => {
             </Button>
 
             {isOpenModal &&
-            <Portal>
-                <LoginModal isOpen={isOpenModal} onClose={onCloseModal} />
-            </Portal>
+                <Portal>
+                    <LoginModal isOpen={isOpenModal} onClose={onCloseModal}/>
+                </Portal>
             }
         </header>
     )
