@@ -1,4 +1,4 @@
-import { type User } from 'ourEntities/User'
+import { type User } from '@/ourEntities/User'
 
 export interface Comment {
     id: string

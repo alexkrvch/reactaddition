@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { ArticleRecommendationsList } from './ArticleRecommendationsList'
-import { Theme } from 'app/providers/ThemeProvider'
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
+import { Theme } from '@/app/providers/ThemeProvider'
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import React from 'react'
-import { StoreProvider } from 'app/providers/StoreProvider'
-import { type Article } from 'ourEntities/Article'
-import { UserRole } from 'ourEntities/User'
+import { StoreProvider } from '@/app/providers/StoreProvider'
+import { type Article } from '@/ourEntities/Article'
+import { UserRole } from '@/ourEntities/User'
 
 const article: Article = {
     id: '1',

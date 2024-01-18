@@ -8,13 +8,13 @@ import {
     type ThunkMiddleware
 } from '@reduxjs/toolkit'
 import { type ReducerManager, type StateSchema, type ThunkExtraArg } from './StateSchema'
-import { counterReducer } from 'ourEntities/Counter'
-import { userReducer } from 'ourEntities/User'
+import { counterReducer } from '@/ourEntities/Counter'
+import { userReducer } from '@/ourEntities/User'
 import { createReducerManager } from './reducerManager'
-import { apiInstance } from 'shared/api/api'
+import { apiInstance } from '@/shared/api/api'
 import { type ToolkitStore } from '@reduxjs/toolkit/dist/configureStore'
-import { scrollSaveReducer } from 'features/ScrollSave'
-import { rtkApi } from 'shared/api/rtkApi'
+import { scrollSaveReducer } from '@/features/ScrollSave'
+import { rtkApi } from '@/shared/api/rtkApi'
 
 export function createReduxStore (
     initialState?: StateSchema,

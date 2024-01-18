@@ -30,6 +30,7 @@
     transition: var(--defaul-transition);
     transform: scale(0.1);
     max-width: 60%;
+    z-index: var(--modal-z-index);
 }
 
 .opened {

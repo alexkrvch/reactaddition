@@ -1,6 +1,6 @@
 import { loginByUsername } from './loginByUsername'
-import { userActions, UserRole } from 'ourEntities/User'
-import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk'
+import { userActions, UserRole } from '@/ourEntities/User'
+import { TestAsyncThunk } from '@/shared/lib/tests/TestAsyncThunk/TestAsyncThunk'
 
 describe('loginByUsername', () => {
     test('Test auth by username and get result | success', async () => {

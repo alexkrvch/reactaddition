@@ -1,6 +1,6 @@
 import { classNames, type Mods } from '../../lib/classNames/classNames'
 import React, { type FC, memo, type ReactNode, useCallback, useEffect } from 'react'
-import { useTheme } from 'app/providers/ThemeProvider'
+import { useTheme } from '@/app/providers/ThemeProvider'
 import { useAnimationLibs } from '../../lib/components/AnimationProvider'
 import { Overlay } from '../Overlay/Overlay'
 import cls from './Drawer.module.scss'

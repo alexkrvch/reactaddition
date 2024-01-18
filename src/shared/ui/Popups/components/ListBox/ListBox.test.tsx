@@ -1,4 +1,4 @@
-import { ComponentRender } from 'shared/lib/tests/ComponentRender/ComponentRender'
+import { ComponentRender } from '@/shared/lib/tests/ComponentRender/ComponentRender'
 import { ListBox } from './ListBox'
 
 describe('ListBox component', () => {

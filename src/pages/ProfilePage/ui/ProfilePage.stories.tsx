@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Theme } from 'app/providers/ThemeProvider'
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
+import { Theme } from '@/app/providers/ThemeProvider'
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import React from 'react'
 import ProfilePage from './ProfilePage'
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator'
-import { Country } from 'ourEntities/Country'
-import { Currency } from 'ourEntities/Currency'
-import avatar from 'shared/assets/png/150x150.png'
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
+import { Country } from '@/ourEntities/Country'
+import { Currency } from '@/ourEntities/Currency'
+import avatar from '@/shared/assets/png/150x150.png'
 
 const dataForProfile = {
     profile: {
