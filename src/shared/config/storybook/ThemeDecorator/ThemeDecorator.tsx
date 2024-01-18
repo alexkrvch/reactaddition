@@ -1,4 +1,4 @@
-import { type Theme, ThemeProvider } from 'app/providers/ThemeProvider'
+import { type Theme, ThemeProvider } from '@/app/providers/ThemeProvider'
 import { type FC, type ReactNode } from 'react'
 
 interface ThemeDecoratorProps {

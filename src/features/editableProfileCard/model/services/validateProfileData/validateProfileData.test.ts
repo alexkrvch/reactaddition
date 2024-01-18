@@ -1,6 +1,6 @@
 import { validateProfileData } from './validateProfileData'
-import { Country } from 'ourEntities/Country'
-import { Currency } from 'ourEntities/Currency'
+import { Country } from '@/ourEntities/Country'
+import { Currency } from '@/ourEntities/Currency'
 
 import { ValidateProfileError } from '../../consts/consts'
 

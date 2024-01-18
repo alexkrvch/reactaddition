@@ -16,6 +16,12 @@ export default ({ config }: { config: webpack.Configuration }): any => {
     }
     config.resolve?.modules?.push(paths.src)
 
+    config.resolve?.alias
+        ? config.resolve.alias = {
+            '@': paths.src
+        }
+        : console.log('Error with config')
+
     const imageRule = config.module?.rules?.find((rule) =>
         // @ts-expect-error problem with config
         rule.test?.test('.svg')

@@ -1,5 +1,5 @@
 import { ArticleSortSelector } from './ArticleSortSelector'
-import { ComponentRender } from 'shared/lib/tests/ComponentRender/ComponentRender'
+import { ComponentRender } from '@/shared/lib/tests/ComponentRender/ComponentRender'
 import { ArticleSortField } from '../../model/consts/consts'
 
 describe('ArticleSortSelector component', () => {

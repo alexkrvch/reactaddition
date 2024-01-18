@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { ArticleListItem } from './ArticleListItem'
-import { Theme } from 'app/providers/ThemeProvider'
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
+import { Theme } from '@/app/providers/ThemeProvider'
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import React from 'react'
 import { type Article } from '../../model/types/article'
-import blankImg from 'shared/assets/png/150x150.png'
-import { UserRole } from 'ourEntities/User'
+import blankImg from '@/shared/assets/png/150x150.png'
+import { UserRole } from '@/ourEntities/User'
 import { ArticleBlockType, ArticleType, ArticleView } from '../../model/consts/consts'
 
 const article = {

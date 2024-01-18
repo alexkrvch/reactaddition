@@ -1,9 +1,9 @@
-import { classNames } from 'shared/lib/classNames/classNames'
+import { classNames } from '@/shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
 import { memo } from 'react'
-import { ArticleList } from 'ourEntities/Article'
-import { Text, TextSize } from 'shared/ui/Text/Text'
-import { VStack } from 'shared/ui/Stack'
+import { ArticleList } from '@/ourEntities/Article'
+import { Text, TextSize } from '@/shared/ui/Text/Text'
+import { VStack } from '@/shared/ui/Stack'
 import { useArticleRecommendationsList } from '../../api/articleRecommendationsApi'
 
 interface ArticleRecommendationsListProps {
@@ -25,7 +25,6 @@ export const ArticleRecommendationsList = memo((props: ArticleRecommendationsLis
                 title={t('Рекомендуем')}
             />
             <ArticleList
-                virtualized={false}
                 articles={articles}
                 target={'_blank'}
             />

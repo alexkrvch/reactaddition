@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { type ReactElement } from 'react'
-import { Page } from 'widgets/Page/Page'
-import { Text } from 'shared/ui/Text/Text'
+import { Page } from '@/widgets/Page/Page'
+import { Text } from '@/shared/ui/Text/Text'
 
 const ForbiddenPage = (): ReactElement => {
     const { t } = useTranslation()

@@ -1,7 +1,7 @@
-import { type CounterSchema } from 'ourEntities/Counter'
-import { type UserSchema } from 'ourEntities/User'
-import { type LoginSchema } from 'features/AuthByUsername'
-import { type ArticleDetailsSchema } from 'ourEntities/Article'
+import { type CounterSchema } from '@/ourEntities/Counter'
+import { type UserSchema } from '@/ourEntities/User'
+import { type LoginSchema } from '@/features/AuthByUsername'
+import { type ArticleDetailsSchema } from '@/ourEntities/Article'
 import {
     type AnyAction,
     type CombinedState,
@@ -12,12 +12,12 @@ import {
 import { type AxiosInstance } from 'axios'
 import {
     type ArticleDetailsPageSchema
-} from 'pages/ArticleDetailsPage'
-import { type AddCommentFormSchema } from 'features/addCommentForm'
-import { type ArticlesPageSchema } from 'pages/ArticlesPage'
-import { type ScrollSaveSchema } from 'features/ScrollSave'
-import { type rtkApi } from 'shared/api/rtkApi'
-import { type ProfileSchema } from 'features/editableProfileCard'
+} from '@/pages/ArticleDetailsPage'
+import { type AddCommentFormSchema } from '@/features/addCommentForm'
+import { type ArticlesPageSchema } from '@/pages/ArticlesPage'
+import { type ScrollSaveSchema } from '@/features/ScrollSave'
+import { type rtkApi } from '@/shared/api/rtkApi'
+import { type ProfileSchema } from '@/features/editableProfileCard'
 
 export interface StateSchema {
     counter: CounterSchema

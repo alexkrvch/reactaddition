@@ -1,4 +1,4 @@
-export type { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage/model/types'
+export type { ArticleDetailsPageSchema } from './model/types'
 
 export {
     ArticleDetailsPageAsync as ArticleDetailsPage
@@ -9,4 +9,4 @@ export type {
 } from './model/types/ArticleDetailsCommentsSchema'
 export type {
     ArticleDetailsRecommendSchema
-} from 'pages/ArticleDetailsPage/model/types/ArticleDetailsRecommendSchema'
+} from './model/types/ArticleDetailsRecommendSchema'
