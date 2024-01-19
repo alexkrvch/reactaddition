@@ -1,4 +1,4 @@
-import { type FC, memo, type MutableRefObject, type ReactNode, useRef, type UIEvent } from 'react'
+import { type FC, memo, type MutableRefObject, type ReactNode, type UIEvent, useRef } from 'react'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import cls from './Page.module.scss'
 import { useInfinityScroll } from '@/shared/lib/hooks/useInfinityScroll/useInfinityScroll'
@@ -57,7 +57,7 @@ export const Page: FC<PageProps> = memo((props) => {
             id={PAGE_ID}
         >
             {children}
-            {onScrollEnd ? <div className={cls.trigger} ref={triggerRef} /> : null}
+            {onScrollEnd ? <div className={cls.trigger} ref={triggerRef}/> : null}
         </main>
     )
 })
