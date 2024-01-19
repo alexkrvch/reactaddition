@@ -1,4 +1,4 @@
-import { type FC, useState, useMemo, memo } from 'react'
+import { type FC, memo, useMemo, useState } from 'react'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import cls from './Sidebar.module.scss'
 import { ThemeSwitcher } from '@/widgets/ThemeSwitcher'
@@ -39,7 +39,7 @@ export const Sidebar: FC<SidebarProps> = memo(({ className }) => {
                 [className])}
         >
             <VStack role={'navigation'} gap={'8'} className={cls.menu}>
-                { itemsList }
+                {itemsList}
             </VStack>
             <Button
                 className={cls.collapseBtn}
@@ -49,12 +49,12 @@ export const Sidebar: FC<SidebarProps> = memo(({ className }) => {
                 square={true}
                 size={ButtonSize.L}
             >
-                { collapsed ? '>' : '<' }
+                {collapsed ? '>' : '<'}
             </Button>
 
             <div className={cls.switchers}>
-                <ThemeSwitcher />
-                <LangSwitcher className={cls.lang} short={collapsed} />
+                <ThemeSwitcher/>
+                <LangSwitcher className={cls.lang} short={collapsed}/>
             </div>
         </aside>
     )
