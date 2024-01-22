@@ -50,7 +50,7 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'error',
         '@typescript-eslint/explicit-function-return-type': 'warn',
         'react/prop-types': 'off',
-        'heikun-eslint-checker/path-checker': 'error',
+        'heikun-eslint-checker/path-checker': ['error', {alias: '@'}],
         'i18next/no-literal-string': [
             'error',
             {markupOnly: true}
