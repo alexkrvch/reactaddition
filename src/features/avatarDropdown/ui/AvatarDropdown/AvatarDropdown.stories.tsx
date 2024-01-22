@@ -3,9 +3,10 @@ import { AvatarDropdown } from './AvatarDropdown'
 import { Theme } from '@/app/providers/ThemeProvider'
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import React from 'react'
+import { StoreProvider } from '@/app/providers/StoreProvider'
 
 const meta = {
-    title: 'shared/AvatarDropdown',
+    title: 'features/AvatarDropdown',
     component: AvatarDropdown,
     parameters: {
         layout: 'fullscreen'
@@ -24,9 +25,11 @@ export const PrimaryDark: Story = {
     args: {},
     decorators: [
         (Story) => (
-            <ThemeDecorator theme={Theme.DARK}>
-                <Story/>
-            </ThemeDecorator>
+            <StoreProvider>
+                <ThemeDecorator theme={Theme.DARK}>
+                    <Story/>
+                </ThemeDecorator>
+            </StoreProvider>
         )
     ]
 }
@@ -35,9 +38,11 @@ export const PrimaryOrange: Story = {
     args: {},
     decorators: [
         (Story) => (
-            <ThemeDecorator theme={Theme.ORANGE}>
-                <Story/>
-            </ThemeDecorator>
+            <StoreProvider>
+                <ThemeDecorator theme={Theme.ORANGE}>
+                    <Story/>
+                </ThemeDecorator>
+            </StoreProvider>
         )
     ]
 }

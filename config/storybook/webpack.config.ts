@@ -18,6 +18,7 @@ export default ({ config }: { config: webpack.Configuration }): any => {
 
     config.resolve?.alias
         ? config.resolve.alias = {
+            ...config.resolve.alias,
             '@': paths.src
         }
         : console.log('Error with config')
