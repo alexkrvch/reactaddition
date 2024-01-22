@@ -742,5 +742,70 @@
       "username": "kiriev",
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Code-1076536.jpg"
     }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "2"
+    },
+    {
+      "userId": "1",
+      "articleId": "3",
+      "rate": 3,
+      "feedback": "",
+      "id": "u8uxQ-1"
+    },
+    {
+      "userId": "1",
+      "articleId": "9",
+      "rate": 5,
+      "feedback": "yesy",
+      "id": "7CbM0zn"
+    },
+    {
+      "userId": "1",
+      "articleId": "10",
+      "rate": 5,
+      "id": "99f7qx3"
+    },
+    {
+      "userId": "1",
+      "articleId": "16",
+      "rate": 5,
+      "feedback": "523523532",
+      "id": "F_pWEvO"
+    },
+    {
+      "userId": "1",
+      "articleId": "17",
+      "rate": 2,
+      "id": "URcBBXm"
+    }
+  ],
+  "profile-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хороший профиль",
+      "userId": "1",
+      "profileId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Хорошая профиль",
+      "userId": "1",
+      "profileId": "2"
+    }
   ]
 }
