@@ -806,6 +806,18 @@
       "feedback": "Хорошая профиль",
       "userId": "1",
       "profileId": "2"
+    },
+    {
+      "userId": "1",
+      "profileId": "3",
+      "rate": 4,
+      "id": "LdC6aRy"
+    },
+    {
+      "userId": "3",
+      "profileId": "1",
+      "rate": 5,
+      "id": "0ma5R5O"
     }
   ]
 }
