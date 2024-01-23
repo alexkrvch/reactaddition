@@ -51,7 +51,12 @@ module.exports = {
         '@typescript-eslint/explicit-function-return-type': 'warn',
         'react/prop-types': 'off',
         'heikun-eslint-checker/path-checker': ['error', {alias: '@'}],
-        'heikun-eslint-checker/public-api-imports': ['error', {alias: '@'}],
+        'heikun-eslint-checker/public-api-imports': ['error',
+            {
+                alias: '@',
+                testFilesPatterns: ['**.*.test.*', '**/*.story.*', '**/StoreDecorator.tsx']
+            }
+        ],
         'i18next/no-literal-string': [
             'error',
             {markupOnly: true}
