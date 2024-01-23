@@ -3,10 +3,10 @@ import { classNames } from '@/shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
 import cls from './AvatarDropdown.module.scss'
 import { Avatar } from '@/shared/ui/Avatar/Avatar'
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig'
 import { Dropdown } from '@/shared/ui/Popups'
 import { getUserAuthData, isUserAdmin, isUserManager, userActions } from '@/ourEntities/User'
 import { useDispatch, useSelector } from 'react-redux'
+import { RoutePath } from '@/shared/const/router'
 
 interface AvatarDropdownProps {
     className?: string
