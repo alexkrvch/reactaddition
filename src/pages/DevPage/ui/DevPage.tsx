@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { type ReactElement } from 'react'
 import { BugButton } from '@/app/providers/ErrorBoundary'
-import { Page } from '@/widgets/Page/Page'
+import { Page } from '@/widgets/Page'
 import { ListBox } from '@/shared/ui/Popups/components/ListBox/ListBox'
 import { HStack } from '@/shared/ui/Stack'
 
