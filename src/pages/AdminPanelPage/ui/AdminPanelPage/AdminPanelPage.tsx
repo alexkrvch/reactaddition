@@ -2,7 +2,7 @@ import { type FC, memo } from 'react'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
 import cls from './AdminPanelPage.module.scss'
-import { Page } from '@/widgets/Page/Page'
+import { Page } from '@/widgets/Page'
 
 interface AdminPanelPageProps {
     className?: string
