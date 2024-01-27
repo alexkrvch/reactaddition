@@ -11,16 +11,12 @@ import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileF
 import { getProfileLoading } from '../../model/selectors/getProfileLoading/getProfileLoading'
 import { getProfileError } from '../../model/selectors/getProfileError/getProfileError'
 import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly'
-import {
-    getProfileValidateErrors
-} from '../../model/selectors/getProfileValidateErrors/getProfileValidateErrors'
+import { getProfileValidateErrors } from '../../model/selectors/getProfileValidateErrors/getProfileValidateErrors'
 import { fetchProfileData } from '../../model/services/fetchProfileData/fetchProfileData'
 import { profileActions, profileReducer } from '../../model/slice/profileSlice'
 import { DynamicModuleLoader, type ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { ProfileCard } from '@/ourEntities/Profile'
-import {
-    EditableProfileCardHeader
-} from '../EditableProfileCardHeader/EditableProfileCardHeader'
+import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader'
 import { VStack } from '@/shared/ui/Stack'
 import { ValidateProfileError } from '../../model/consts/consts'
 
@@ -102,7 +98,7 @@ export const EditableProfileCard: FC<EditableProfileCardProps> = memo((props) =>
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount={true}>
             <VStack gap={'16'} max className={classNames('', {}, [className])}>
-                <EditableProfileCardHeader />
+                <EditableProfileCardHeader/>
                 {validateError?.length && validateError.map(err => (
                     <Text
                         key={err}
