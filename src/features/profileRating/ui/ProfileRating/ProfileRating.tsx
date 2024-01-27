@@ -48,7 +48,7 @@ const ProfileRating: FC<ProfileRatingProps> = memo((props) => {
     }, [handleRateArticle])
 
     if (isLoading) {
-        return <Skeleton width={'100%'} height={120} />
+        return <Skeleton width={'100%'} height={120}/>
     }
 
     const rating = data?.[0]
