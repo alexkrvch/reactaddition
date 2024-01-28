@@ -1,6 +1,4 @@
-import {
-    createContext, type ReactNode, useContext, useEffect, useMemo, useRef, useState
-} from 'react'
+import { createContext, type ReactNode, useContext, useEffect, useMemo, useRef, useState } from 'react'
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
 type SpringType = typeof import('@react-spring/web')

@@ -19,13 +19,13 @@ type Story = StoryObj<typeof meta>
 
 export const PrimaryLight: Story = {
     args: {
-        children: <Text title={'Some title'} text={'Some text'} />
+        children: <Text title={'Some title'} text={'Some text'}/>
     }
 }
 
 export const PrimaryDark: Story = {
     args: {
-        children: <Text title={'Some title'} text={'Some text'} />
+        children: <Text title={'Some title'} text={'Some text'}/>
     },
     decorators: [
         (Story) => (
@@ -38,7 +38,7 @@ export const PrimaryDark: Story = {
 
 export const PrimaryOrange: Story = {
     args: {
-        children: <Text title={'Some title'} text={'Some text'} />
+        children: <Text title={'Some title'} text={'Some text'}/>
     },
     decorators: [
         (Story) => (
