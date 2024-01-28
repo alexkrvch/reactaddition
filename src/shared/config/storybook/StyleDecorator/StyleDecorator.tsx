@@ -8,7 +8,7 @@ interface StyleDecoratorProps {
 export const StyleDecorator: FC<StyleDecoratorProps> = ({ children }) => (
     <div style={{ height: '100vh', textAlign: 'center' }}>
         <div style={{ display: 'block' }}>
-            { children }
+            {children}
         </div>
     </div>
 )

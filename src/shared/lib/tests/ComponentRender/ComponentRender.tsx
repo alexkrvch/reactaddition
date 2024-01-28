@@ -26,7 +26,7 @@ export function ComponentRender (
         <MemoryRouter initialEntries={[route]}>
             <StoreProvider asyncReducers={asyncReducers} initialState={initialState}>
                 <I18nextProvider i18n={i18nForTests}>
-                    { component }
+                    {component}
                 </I18nextProvider>
             </StoreProvider>
         </MemoryRouter>
