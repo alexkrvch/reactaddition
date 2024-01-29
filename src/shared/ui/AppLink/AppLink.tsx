@@ -6,7 +6,8 @@ import { Link, type LinkProps } from 'react-router-dom'
 export enum AppLinkTheme {
     PRIMARY = 'primary',
     SECONDARY = 'secondary',
-    RED = 'red'
+    RED = 'red',
+    BLACK = 'black'
 }
 
 interface AppLinkProps extends LinkProps {
