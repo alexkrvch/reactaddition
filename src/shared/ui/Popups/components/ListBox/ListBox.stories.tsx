@@ -12,7 +12,8 @@ const meta = {
     },
     args: {
         defaultValue: 'Выберите значение',
-        onChange: (value: string) => {},
+        onChange: (value: string) => {
+        },
         value: undefined,
         items: [
             { value: '1', content: '123' },
