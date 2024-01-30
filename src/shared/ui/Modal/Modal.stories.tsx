@@ -31,7 +31,7 @@ export const ModalDark: Story = {
     decorators: [
         (Story) => (
             <ThemeDecorator theme={Theme.DARK}>
-                <Story />
+                <Story/>
             </ThemeDecorator>
         )
     ]
@@ -45,7 +45,7 @@ export const ModalOrange: Story = {
     decorators: [
         (Story) => (
             <ThemeDecorator theme={Theme.ORANGE}>
-                <Story />
+                <Story/>
             </ThemeDecorator>
         )
     ]

@@ -31,7 +31,7 @@ export const PrimaryDark: Story = {
     decorators: [
         (Story) => (
             <ThemeDecorator theme={Theme.DARK}>
-                <Story />
+                <Story/>
             </ThemeDecorator>
         )
     ]
@@ -45,7 +45,7 @@ export const PrimaryOrange: Story = {
     decorators: [
         (Story) => (
             <ThemeDecorator theme={Theme.ORANGE}>
-                <Story />
+                <Story/>
             </ThemeDecorator>
         )
     ]
@@ -68,7 +68,7 @@ export const PrimaryDarkS: Story = {
     decorators: [
         (Story) => (
             <ThemeDecorator theme={Theme.DARK}>
-                <Story />
+                <Story/>
             </ThemeDecorator>
         )
     ]
@@ -83,7 +83,7 @@ export const PrimaryOrangeS: Story = {
     decorators: [
         (Story) => (
             <ThemeDecorator theme={Theme.ORANGE}>
-                <Story />
+                <Story/>
             </ThemeDecorator>
         )
     ]
@@ -106,7 +106,7 @@ export const PrimaryDarkL: Story = {
     decorators: [
         (Story) => (
             <ThemeDecorator theme={Theme.DARK}>
-                <Story />
+                <Story/>
             </ThemeDecorator>
         )
     ]
@@ -121,7 +121,7 @@ export const PrimaryOrangeL: Story = {
     decorators: [
         (Story) => (
             <ThemeDecorator theme={Theme.ORANGE}>
-                <Story />
+                <Story/>
             </ThemeDecorator>
         )
     ]
@@ -140,7 +140,7 @@ export const PrimaryOnlyTitleDark: Story = {
     decorators: [
         (Story) => (
             <ThemeDecorator theme={Theme.DARK}>
-                <Story />
+                <Story/>
             </ThemeDecorator>
         )
     ]
@@ -153,7 +153,7 @@ export const PrimaryOnlyTitleOrange: Story = {
     decorators: [
         (Story) => (
             <ThemeDecorator theme={Theme.ORANGE}>
-                <Story />
+                <Story/>
             </ThemeDecorator>
         )
     ]
@@ -172,7 +172,7 @@ export const PrimaryOnlyTextDark: Story = {
     decorators: [
         (Story) => (
             <ThemeDecorator theme={Theme.DARK}>
-                <Story />
+                <Story/>
             </ThemeDecorator>
         )
     ]
@@ -185,7 +185,7 @@ export const PrimaryOnlyTextOrange: Story = {
     decorators: [
         (Story) => (
             <ThemeDecorator theme={Theme.ORANGE}>
-                <Story />
+                <Story/>
             </ThemeDecorator>
         )
     ]
@@ -208,7 +208,7 @@ export const ErrorDark: Story = {
     decorators: [
         (Story) => (
             <ThemeDecorator theme={Theme.DARK}>
-                <Story />
+                <Story/>
             </ThemeDecorator>
         )
     ]
@@ -223,7 +223,7 @@ export const ErrorOrange: Story = {
     decorators: [
         (Story) => (
             <ThemeDecorator theme={Theme.ORANGE}>
-                <Story />
+                <Story/>
             </ThemeDecorator>
         )
     ]

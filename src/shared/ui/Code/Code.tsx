@@ -1,4 +1,4 @@
-import { useCallback, type FC, memo } from 'react'
+import { type FC, memo, useCallback } from 'react'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import cls from './Code.module.scss'
 import { Button, ButtonTheme } from '../Button/Button'
@@ -30,7 +30,7 @@ export const Code: FC<CodeProps> = memo((props) => {
                 theme={ButtonTheme.CLEAR}
                 onClick={onCopy}
             >
-                <CopyIcon className={cls.copyIcon} />
+                <CopyIcon className={cls.copyIcon}/>
             </Button>
             <code>
                 {text}
