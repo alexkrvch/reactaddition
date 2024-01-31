@@ -27,7 +27,7 @@ export const Light: Story = {
                         authData: {}
                     }
                 }}>
-                <Story />
+                <Story/>
             </StoreDecorator>
         )
     ]
@@ -44,7 +44,7 @@ export const Dark: Story = {
                     }
                 }}>
                 <ThemeDecorator theme={Theme.DARK}>
-                    <Story />
+                    <Story/>
                 </ThemeDecorator>
             </StoreDecorator>
         )
@@ -62,7 +62,7 @@ export const Orange: Story = {
                     }
                 }}>
                 <ThemeDecorator theme={Theme.ORANGE}>
-                    <Story />
+                    <Story/>
                 </ThemeDecorator>
             </StoreDecorator>
         )
@@ -80,7 +80,7 @@ export const NoAuth: Story = {
                     }
                 }}>
                 <ThemeDecorator theme={Theme.LIGHT}>
-                    <Story />
+                    <Story/>
                 </ThemeDecorator>
             </StoreDecorator>
         )
@@ -98,7 +98,7 @@ export const Auth: Story = {
                     }
                 }}>
                 <ThemeDecorator theme={Theme.LIGHT}>
-                    <Story />
+                    <Story/>
                 </ThemeDecorator>
             </StoreDecorator>
         )
