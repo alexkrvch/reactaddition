@@ -32,7 +32,7 @@ export const SidebarItem: FC<SidebarItemProps> = memo((props) => {
             className={classNames(cls.menuItem, { [cls.collapsed]: collapsed }, [])}
         >
             <div className={cls.link}>
-                <item.Icon />
+                <item.Icon/>
                 <span>{t(item.text)}</span>
             </div>
         </AppLink>

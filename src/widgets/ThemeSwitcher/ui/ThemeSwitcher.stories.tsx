@@ -25,7 +25,7 @@ export const LoaderDark: Story = {
     decorators: [
         (Story) => (
             <ThemeDecorator theme={Theme.DARK}>
-                <Story />
+                <Story/>
             </ThemeDecorator>
         )
     ]
@@ -36,7 +36,7 @@ export const LoaderOrange: Story = {
     decorators: [
         (Story) => (
             <ThemeDecorator theme={Theme.ORANGE}>
-                <Story />
+                <Story/>
             </ThemeDecorator>
         )
     ]
