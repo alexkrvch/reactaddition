@@ -8,6 +8,7 @@ const AboutPage = (): ReactElement => {
     return (
         <Page>
             {t('О сайте')}
+            {t('Place for text')}
         </Page>
     )
 }
