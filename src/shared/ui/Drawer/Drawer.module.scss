@@ -12,12 +12,12 @@
     height: 70%;
     background: var(--bg-color);
     bottom: 0;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     position: relative;
     width: 100%;
     min-height: 100px;
-    padding: 20px;
+    padding: 10px;
     transition: 0.3s transform;
     transform: translateY(100%);
     overflow: auto hidden;
