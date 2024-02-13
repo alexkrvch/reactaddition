@@ -12,8 +12,8 @@
     height: 70%;
     background: var(--bg-color);
     bottom: 0;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
     position: relative;
     width: 100%;
     min-height: 100px;
@@ -33,7 +33,7 @@
     background: var(--bg-color);
     margin: auto;
     bottom: 40px;
-    border-radius: 12px;
+    border-radius: 14px;
 }
 
 .opened {
