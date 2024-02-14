@@ -40,7 +40,7 @@ export const ProfilePageLight: Story = {
     decorators: [
         (Story) => (
             <StoreDecorator state={dataForProfile}>
-                <Story />
+                <Story/>
             </StoreDecorator>
         )
     ]
@@ -52,7 +52,7 @@ export const ProfilePageDark: Story = {
         (Story) => (
             <StoreDecorator state={dataForProfile}>
                 <ThemeDecorator theme={Theme.DARK}>
-                    <Story />
+                    <Story/>
                 </ThemeDecorator>
             </StoreDecorator>
         )
@@ -65,7 +65,7 @@ export const ProfilePageOrange: Story = {
         (Story) => (
             <StoreDecorator state={dataForProfile}>
                 <ThemeDecorator theme={Theme.ORANGE}>
-                    <Story />
+                    <Story/>
                 </ThemeDecorator>
             </StoreDecorator>
         )
