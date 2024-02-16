@@ -10,9 +10,7 @@ import { getArticleComments } from '../../model/slices/articleDetailsCommentsSli
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
-import {
-    fetchCommentsByArticleId
-} from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
+import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
 import { VStack } from '@/shared/ui/Stack'
 
 interface ArticleDetailsCommentsProps {
