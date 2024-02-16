@@ -23,7 +23,7 @@ export const AboutPageLight: Story = {
         (Story) => (
             <StoreProvider>
                 <ThemeDecorator theme={Theme.LIGHT}>
-                    <Story />
+                    <Story/>
                 </ThemeDecorator>
             </StoreProvider>
         )
@@ -36,7 +36,7 @@ export const AboutPageDark: Story = {
         (Story) => (
             <StoreProvider>
                 <ThemeDecorator theme={Theme.DARK}>
-                    <Story />
+                    <Story/>
                 </ThemeDecorator>
             </StoreProvider>
         )
@@ -49,7 +49,7 @@ export const AboutPageOrange: Story = {
         (Story) => (
             <StoreProvider>
                 <ThemeDecorator theme={Theme.ORANGE}>
-                    <Story />
+                    <Story/>
                 </ThemeDecorator>
             </StoreProvider>
         )
