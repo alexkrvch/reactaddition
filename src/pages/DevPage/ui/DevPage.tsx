@@ -20,10 +20,10 @@ const DevPage = (): ReactElement => {
                     onChange={(value: string) => {}}
                     value={undefined}
                     items={[
-                        { value: '1', content: '123' },
-                        { value: '2', content: '234', disabled: true },
-                        { value: '3', content: '345' },
-                        { value: '4', content: '456' }
+                        { value: '1', content: 'Heikun' },
+                        { value: '2', content: 'Test', disabled: true },
+                        { value: '3', content: 'List box' },
+                        { value: '4', content: 'Only for test' }
                     ]}
                 />
             </HStack>
