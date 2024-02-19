@@ -4,7 +4,6 @@ import { BugButton } from '@/app/providers/ErrorBoundary'
 import { Page } from '@/widgets/Page'
 import { ListBox } from '@/shared/ui/Popups/components/ListBox/ListBox'
 import { HStack } from '@/shared/ui/Stack'
-import { Counter } from '@/ourEntities/Counter'
 
 const DevPage = (): ReactElement => {
     const { t } = useTranslation('dev')
@@ -12,12 +11,12 @@ const DevPage = (): ReactElement => {
     return (
         <Page>
             <p>{t('Developer page for test some elements')}</p>
-            <Counter />
             <HStack gap={'16'}>
-                <BugButton />
+                <BugButton/>
                 <ListBox
                     defaultValue={'Выберите значение'}
-                    onChange={(value: string) => {}}
+                    onChange={(value: string) => {
+                    }}
                     value={undefined}
                     items={[
                         { value: '1', content: 'Heikun' },
